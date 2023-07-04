@@ -24,7 +24,11 @@ class userscreen extends StatelessWidget {
                 child: SingleChildScrollView(
                   child: Column(
                     children: [
-                      usercontainer(300, 'images/im.jpg', 'Inventory'.tr, 20),
+                      GestureDetector(
+                          onTap: () {
+
+                          },
+                          child: usercontainer(300, 'images/im.jpg', 'Inventory'.tr, 20)),
                       Row(
                         children: [
                           Expanded(child: usercontainer(300, 'images/im.jpg', 'sale'.tr, 20)),
