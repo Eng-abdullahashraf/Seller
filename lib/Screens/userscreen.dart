@@ -25,9 +25,7 @@ class userscreen extends StatelessWidget {
                   child: Column(
                     children: [
                       GestureDetector(
-                          onTap: () {
 
-                          },
                           child: usercontainer(300, 'images/im.jpg', 'Inventory'.tr, 20)),
                       Row(
                         children: [
