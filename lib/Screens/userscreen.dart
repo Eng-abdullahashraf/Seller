@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
+import 'package:seller/Screens/inventory.dart';
 import 'package:seller/component.dart';
 import 'package:seller/cubit/Mycubit.dart';
 import 'package:seller/cubit/states.dart';
@@ -26,7 +27,7 @@ class userscreen extends StatelessWidget {
                     children: [
                       GestureDetector(
                         onTap: () {
-
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>inventorypage()));
                         },
                           child: usercontainer(300, 'images/im.jpg', 'Inventory'.tr, 20)),
                       Row(
