@@ -20,6 +20,7 @@ class inventorypage extends StatelessWidget {
                   SizedBox(height: 15,),
                   Container(child:
                     Column(children: [
+                      Text('data'),
                       textfie(
                           IC: Color(0xffbcc1c6),
                           FC: Color(0xffffffff),
