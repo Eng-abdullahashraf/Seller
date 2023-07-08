@@ -154,6 +154,55 @@ Widget radiocontainer() => BlocProvider(
       ),
     );
 
+Widget productstors() => BlocProvider(
+      create: (BuildContext context) => Mycubit(),
+      child: BlocConsumer<Mycubit , Sellerstates>(
+        listener: ((context, state) {}),
+        builder: ((context, state) {
+          return Container(
+            decoration: BoxDecoration(
+                color: Colors.grey),
+            height: 100,
+            width: double.infinity,
+            child: const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: (Row(
+                children: [
+                  Padding(
+                    padding: EdgeInsets.only(
+                      right: 10,
+                    ),
+                    child: Text(
+                      'السعر',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ),
+                  Expanded(
+                    child: Padding(
+                      padding: EdgeInsets.only(right: 30),
+                      child: Text(
+                        'الكميه',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ),
+                  ),
+
+                  Padding(
+                    padding: EdgeInsets.only(left: 10),
+                    child: Text(
+                      'المنتج',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ),
+
+                ],
+              )),
+            ),
+          );
+        }),
+      ),
+    );
+
 Widget usercontainer(
   @required double? containerheight,
   @required String? imagepath,
