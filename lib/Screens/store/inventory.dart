@@ -54,9 +54,9 @@ class inventorypage extends StatelessWidget {
                           color: Colors.blue),
                       height: 40,
                       width: double.infinity,
-                      child: const Padding(
+                      child:  Padding(
                         padding: EdgeInsets.all(8.0),
-                        child: (Row(
+                        child: Row(
                           children: [
                             Padding(
                               padding: EdgeInsets.only(
@@ -84,7 +84,7 @@ class inventorypage extends StatelessWidget {
                               ),
                             ),
                           ],
-                        )),
+                        ),
                       ),
                     ),
                   ),

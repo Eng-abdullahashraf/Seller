@@ -181,9 +181,9 @@ Widget productstors() => BlocProvider(
                 color: Colors.grey),
             height: 100,
             width: double.infinity,
-            child: const Padding(
+            child:  Padding(
               padding: EdgeInsets.all(8.0),
-              child: (Row(
+              child: Row(
                 children: [
                   Padding(
                     padding: EdgeInsets.only(
@@ -213,7 +213,7 @@ Widget productstors() => BlocProvider(
                   ),
 
                 ],
-              )),
+              ),
             ),
           );
         }),
