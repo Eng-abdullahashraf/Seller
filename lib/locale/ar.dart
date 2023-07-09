@@ -19,7 +19,9 @@ const Map<String, String> ar={
   'suppliers':'الموردين',
   'customer':'العملاء',
   'expenses':'المصروفات',
-  'account':'إدارة الحسابات'
+  'account':'إدارة الحسابات',
+  'shopping':'تسوق الان'
+
 
 
 

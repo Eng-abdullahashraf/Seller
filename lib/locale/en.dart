@@ -19,8 +19,8 @@ const Map<String, String> en={
   'suppliers':'Suppliers',
   'customer':'Customers',
   'expenses':'Expenses',
-  'account':'Account manage'
-
+  'account':'Account manage',
+  'shopping':'SHOP NOW'
 
 
 };

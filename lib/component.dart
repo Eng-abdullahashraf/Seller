@@ -16,10 +16,12 @@ Widget textfie(
     @required TextEditingController? controller}) {
   return Container(
     child: TextField(
+
         decoration: InputDecoration(
             iconColor: IC,
             border:
                 OutlineInputBorder(borderRadius: BorderRadius.circular(rad!)),
+            filled: true,
             fillColor: FC,
             prefixIcon: PrefI,
             labelText: LT,
@@ -43,7 +45,22 @@ Widget Buttonfi(
       onTap: onta,
       child: Container(
         decoration: BoxDecoration(
-            color: bcolor!, borderRadius: BorderRadius.circular(decoration!)),
+            color: bcolor!,
+            borderRadius: BorderRadius.circular(decoration!),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black,
+                blurRadius: 10.0,
+                offset: Offset(0.0, 4.0)
+              ),
+              BoxShadow(
+                color: Colors.white,
+                blurRadius: 5.0,
+                  offset: Offset(0.0, 2.0)
+
+              ),
+
+            ]),
         height: hei,
         alignment: Alignment.center,
         width: wid,
