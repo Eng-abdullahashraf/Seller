@@ -18,7 +18,7 @@ Widget textfie(
     child: TextField(
 
         decoration: InputDecoration(
-            iconColor: IC,
+            prefixIconColor: IC,
             border:
                 OutlineInputBorder(borderRadius: BorderRadius.circular(rad!)),
             filled: true,
@@ -240,3 +240,4 @@ Widget usercontainer(
         ]),
       ),
     );
+

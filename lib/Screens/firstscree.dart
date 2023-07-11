@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
 import 'package:seller/Screens/Login.dart';
+import 'package:seller/Screens/shopping/shopascreen.dart';
 import 'package:seller/component.dart';
 import 'package:seller/cubit/Mycubit.dart';
 import 'package:seller/cubit/states.dart';
@@ -96,7 +97,9 @@ class Firstscree extends StatelessWidget {
                                             25,
                                             Color(0xffA2D4BF),
                                             Color(0xff000000),
-                                            () {},
+                                            () {
+                                              Navigator.push(context, MaterialPageRoute(builder: (context) => Shoppingscreen(),));
+                                            },
                                             15),
                                       ],
                                     ),
