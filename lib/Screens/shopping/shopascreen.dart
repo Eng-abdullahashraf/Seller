@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -32,6 +33,23 @@ class Shoppingscreen extends StatelessWidget {
                         Scure: false,
                         rad: 8,
                         controller: search),
+                    SizedBox(height: 15,),
+                    CarouselSlider(
+                      items: Mycubit.get(context).gene(),
+                      options: CarouselOptions(
+                        height: 200,
+                        enlargeCenterPage: true,
+                        initialPage: 0,
+                        autoPlayInterval: Duration(seconds: 5),
+                        scrollDirection: Axis.horizontal,
+                        autoPlay: true,
+                        reverse: true,
+                        viewportFraction: 1.0,
+                        autoPlayCurve: Curves.fastOutSlowIn,
+                        autoPlayAnimationDuration: Duration(seconds: 5),
+                        enableInfiniteScroll: true,
+                      ),
+                    ),
                   ]),
                 ),
               ),

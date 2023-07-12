@@ -102,11 +102,10 @@ class Login extends StatelessWidget {
                           top: 3, right: 8, left: 8, bottom: 3),
                       child: Row(
                         children: [
-                          GestureDetector(
-                            onTap: () {},
+                          TextButton(
+                            onPressed: (){},
                             child: Text(
                               'forget'.tr,
-                              style: TextStyle(color: Colors.blueAccent),
                             ),
                           )
                         ],
@@ -127,13 +126,12 @@ class Login extends StatelessWidget {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text('dont'.tr, style: TextStyle(fontSize: 20)),
-                          GestureDetector(
-                            onTap: () {},
+                          Text('dont'.tr,),
+                          TextButton(
+                            onPressed: (){},
                             child: Text(
                               'signup'.tr,
-                              style: TextStyle(
-                                  color: Colors.blueAccent, fontSize: 20),
+
                             ),
                           )
                         ],
