@@ -16,7 +16,6 @@ Widget textfie(
     @required TextEditingController? controller}) {
   return Container(
     child: TextField(
-
         decoration: InputDecoration(
             prefixIconColor: IC,
             border:
@@ -49,17 +48,13 @@ Widget Buttonfi(
             borderRadius: BorderRadius.circular(decoration!),
             boxShadow: [
               BoxShadow(
-                color: Colors.black,
-                blurRadius: 10.0,
-                offset: Offset(0.0, 4.0)
-              ),
+                  color: Colors.black,
+                  blurRadius: 2.0,
+                  offset: Offset(0.0, 4.0)),
               BoxShadow(
-                color: Colors.white,
-                blurRadius: 5.0,
-                  offset: Offset(0.0, 2.0)
-
-              ),
-
+                  color: Colors.white,
+                  blurRadius: 7.0,
+                  offset: Offset(0.0, 2.0)),
             ]),
         height: hei,
         alignment: Alignment.center,
@@ -75,18 +70,27 @@ Widget Buttonfi(
       ),
     );
 
-Widget Shops() => Container(
-      height: 155,
-      child: ClipRRect(
-          child: Image(image: AssetImage('images/im.jpg')),
-          borderRadius: BorderRadius.circular(15.0)),
-    );
+Widget Shops() => InkWell(
+  onTap: () {
+  },
+  child:   Container(
+
+        width: 180,
+
+        decoration: BoxDecoration(
+
+            color: Color(0xb08ea39c), borderRadius: BorderRadius.circular(25)),
+
+        child: Center(child: Text('data')),
+
+      ),
+);
 
 Widget departments() => Container(
         child: CircleAvatar(
       radius: 70, // set the radius of the circle
-      backgroundImage: AssetImage('images/im.jpg'), // add the image asset
-    ));
+    )
+);
 
 Widget radiocontainer() => BlocProvider(
       create: (BuildContext context) => Mycubit(),
@@ -173,15 +177,14 @@ Widget radiocontainer() => BlocProvider(
 
 Widget productstors() => BlocProvider(
       create: (BuildContext context) => Mycubit(),
-      child: BlocConsumer<Mycubit , Sellerstates>(
+      child: BlocConsumer<Mycubit, Sellerstates>(
         listener: ((context, state) {}),
         builder: ((context, state) {
           return Container(
-            decoration: BoxDecoration(
-                color: Colors.grey),
+            decoration: BoxDecoration(color: Colors.grey),
             height: 100,
             width: double.infinity,
-            child:  Padding(
+            child: Padding(
               padding: EdgeInsets.all(8.0),
               child: Row(
                 children: [
@@ -203,7 +206,6 @@ Widget productstors() => BlocProvider(
                       ),
                     ),
                   ),
-
                   Padding(
                     padding: EdgeInsets.only(left: 10),
                     child: Text(
@@ -211,7 +213,6 @@ Widget productstors() => BlocProvider(
                       style: TextStyle(color: Colors.white),
                     ),
                   ),
-
                 ],
               ),
             ),
@@ -241,3 +242,9 @@ Widget usercontainer(
       ),
     );
 
+Widget Cotainer() => Container(
+      width: double.infinity,
+      decoration: BoxDecoration(
+          color: Color(0xb08ea39c), borderRadius: BorderRadius.circular(25)),
+      child: Center(child: Text('data')),
+    );

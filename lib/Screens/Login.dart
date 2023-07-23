@@ -21,7 +21,7 @@ class Login extends StatelessWidget {
           listener: (context, state) {},
           builder: (context, state) {
             return Scaffold(
-              backgroundColor: Color(0xffDFF2EA),
+              backgroundColor: Colors.seconedcolo,
               body: SingleChildScrollView(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -32,7 +32,7 @@ class Login extends StatelessWidget {
                       height: 200,
                       width: double.infinity,
                       decoration: BoxDecoration(
-                          color: Color(0xff567600),
+                          color: Colors.appcolo,
                           borderRadius: BorderRadius.only(
                               bottomLeft: Radius.circular(20),
                               bottomRight: Radius.circular(20)),
@@ -77,7 +77,7 @@ class Login extends StatelessWidget {
                       padding: const EdgeInsets.all(8.0),
                       child: textfie(
                           IC: Color(0xff000000),
-                          FC: Color(0x72a2d4bf),
+                          FC: Colors.seconedcolo,
                           PrefI: Icon(Icons.email),
                           LT: 'mail'.tr,
                           HT: 'acc@comp.com',
@@ -89,7 +89,7 @@ class Login extends StatelessWidget {
                       padding: const EdgeInsets.all(8.0),
                       child: textfie(
                           IC: Color(0xff000000),
-                          FC: Color(0x72a2d4bf),
+                          FC: Colors.seconedcolo,
                           PrefI: Icon(Icons.password_outlined),
                           LT: 'pass'.tr,
                           HT: 'pass'.tr,
@@ -113,7 +113,7 @@ class Login extends StatelessWidget {
                     ),
                     Container(
                       alignment: Alignment.center,
-                      child: Buttonfi('logi'.tr, 55, 250, 20, Color(0xffA2D4BF),
+                      child: Buttonfi('logi'.tr, 55, 250, 20, Colors.appcolo,
                           Color(0xff000000), () {
                         Navigator.pushReplacement(
                             context,

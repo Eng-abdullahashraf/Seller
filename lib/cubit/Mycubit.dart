@@ -6,6 +6,7 @@ import 'package:bloc/bloc.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:localize_and_translate/localize_and_translate.dart';
+import 'package:seller/component.dart';
 import 'package:seller/cubit/states.dart';
 
 class Mycubit extends Cubit<Sellerstates>{
@@ -21,18 +22,26 @@ class Mycubit extends Cubit<Sellerstates>{
 
   ];
 
+  List<Widget>? gene(){
+    return im.map((element)=>Cotainer()).toList();
+  }
+
   int? valueeradio=1;
   void changeradio(value){
     valueeradio=value;
     emit(Sellerchange());
   }
 
-  List<Widget>? gene(){
-    return im.map((element)=>ClipRRect(
-      child: Image.asset(element, fit: BoxFit.cover,),
-      borderRadius: BorderRadius.circular(15.0),
-    )).toList();
-  }
+  List<Widget>? li=[
+    Cotainer(),
+    Cotainer(),
+    Cotainer(),
+
+  ];
+
+
+
+
 
 
   void translateor(BuildContext context){

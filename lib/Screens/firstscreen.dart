@@ -123,7 +123,7 @@ class Firstscreen extends StatelessWidget {
                       'shops'.tr,
                       style: TextStyle(
                           fontSize: 25,
-                          color: Color(0xff000000),
+                          color: Colors.appcolo,
                           fontWeight: FontWeight.bold),
                     ),
                     Container(
