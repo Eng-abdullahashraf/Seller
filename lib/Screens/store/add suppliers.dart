@@ -96,9 +96,9 @@ class addsuppliers extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(15),
                 child: Row(children: [
-                  Expanded(child: Buttonfi('حفظ', 40, 80, 20, Color(0xff058060), Color(0xffffffff), (){}, 20)),
+                  Expanded(child: Buttonfi('حفظ', 50, 80, 20, Color(0xff058060), Color(0xffffffff), (){}, 20)),
                   SizedBox(width: 10,),
-                  Expanded(child: Buttonfi('حفظ', 40, 80, 20, Color(0xff058060), Color(0xffffffff), (){}, 20))
+                  Expanded(child: Buttonfi('مسح', 50, 80, 20, Color(0xff058060), Color(0xffffffff), (){}, 20))
                 ],),
               )
             ]),

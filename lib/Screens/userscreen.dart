@@ -3,6 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
 import 'package:seller/Screens/store/add%20product.dart';
 import 'package:seller/Screens/store/buying.dart';
+import 'package:seller/Screens/store/coustomers.dart';
+import 'package:seller/Screens/store/expenses.dart';
 import 'package:seller/Screens/store/inventory.dart';
 import 'package:seller/Screens/store/selling.dart';
 import 'package:seller/Screens/store/suppliers.dart';
@@ -158,12 +160,20 @@ class userscreen extends StatelessWidget {
                               Expanded(
                                   child: Padding(
                                 padding: const EdgeInsets.all(8.0),
-                                child: Container(
-                                  height: 120,
-                                  width: 150,
-                                  decoration: BoxDecoration(
-                                      color: Color(0xff058060),
-                                      borderRadius: BorderRadius.circular(20)),
+                                child: GestureDetector(
+                                  onTap: (){
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) => customers()));
+                                  },
+                                  child: Container(
+                                    height: 120,
+                                    width: 150,
+                                    decoration: BoxDecoration(
+                                        color: Color(0xff058060),
+                                        borderRadius: BorderRadius.circular(20)),
+                                  ),
                                 ),
                               ))
                             ],
@@ -189,13 +199,20 @@ class userscreen extends StatelessWidget {
                               Expanded(
                                 child: Padding(
                                   padding: const EdgeInsets.all(8.0),
-                                  child: Container(
-                                    height: 120,
-                                    width: 150,
-                                    decoration: BoxDecoration(
-                                        color: Color(0xff058060),
-                                        borderRadius:
-                                            BorderRadius.circular(20)),
+                                  child: GestureDetector(onTap: (){
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) => expenses()));
+                                  },
+                                    child: Container(
+                                      height: 120,
+                                      width: 150,
+                                      decoration: BoxDecoration(
+                                          color: Color(0xff058060),
+                                          borderRadius:
+                                              BorderRadius.circular(20)),
+                                    ),
                                   ),
                                 ),
                               ),

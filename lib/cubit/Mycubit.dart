@@ -15,6 +15,14 @@ class Mycubit extends Cubit<Sellerstates>{
 
   static Mycubit get(context)=> BlocProvider.of(context);
 
+
+  DateTime dateTime=DateTime(1997,08,25);
+
+  void changedate(date){
+    dateTime=date;
+    emit(Sellerchange());
+  }
+
   final List<String> im=[
     'images/im.jpg',
     'images/ima.jpg',

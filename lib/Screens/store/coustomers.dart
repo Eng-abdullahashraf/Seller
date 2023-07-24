@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:seller/Screens/store/add%20suppliers.dart';
+import 'package:seller/Screens/store/add%20customers.dart';
 import 'package:seller/component.dart';
-class suppliers extends StatelessWidget {
-  const suppliers({Key? key}) : super(key: key);
+class customers extends StatelessWidget {
+  const customers({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -10,7 +10,7 @@ class suppliers extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: Color(0xff058060),
-          title: Text('الموردين'),
+          title: Text('العملاء'),
         ),
         body: Padding(
           padding: const EdgeInsets.all(8.0),
@@ -19,7 +19,7 @@ class suppliers extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('ابحث عن مورد'),
+                  Text('ابحث عن عميل'),
                   SizedBox(
                     height: 15,
                   ),
@@ -29,8 +29,8 @@ class suppliers extends StatelessWidget {
                         textfie(
                           IC: Color(0xffbcc1c6),
                           FC: Color(0xffffffff),
-                          LT: 'الموردين',
-                          HT: 'ادخل اسم المورد',
+                          LT: 'العملاء',
+                          HT: 'ادخل اسم العميل',
                           Scure: false,
                           rad: 25,
                         ),
@@ -58,7 +58,7 @@ class suppliers extends StatelessWidget {
                                 right: 10,
                               ),
                               child: Text(
-                                'المورد',
+                                'العميل',
                                 style: TextStyle(color: Colors.white),
                               ),
                             ),
@@ -66,7 +66,7 @@ class suppliers extends StatelessWidget {
                             Padding(
                               padding: EdgeInsets.only(right: 220),
                               child: Text(
-                                'رقم المورد',
+                                'رقم العميل',
                                 style: TextStyle(color: Colors.white),
                               ),
                             ),
@@ -82,7 +82,7 @@ class suppliers extends StatelessWidget {
                           padding: const EdgeInsets.all(20.0),
                           child: FloatingActionButton(backgroundColor:  Color(0xff058060),
                             onPressed: () {
-                              Navigator.push(context, MaterialPageRoute(builder: (context)=>addsuppliers()));
+                              Navigator.push(context, MaterialPageRoute(builder: (context)=>addcustomers()));
                             },
                             child: Icon(Icons.add),
                           ),
