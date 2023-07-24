@@ -39,7 +39,7 @@ class Firstscree extends StatelessWidget {
                           width: double.infinity,
                           decoration: BoxDecoration(
                             gradient: LinearGradient(
-                                colors: [Colors.appcolo, Color(0x70dff2ea)],
+                                colors: [Color(0xFF058060), Color(0x70dff2ea)],
                                 begin: Alignment.bottomCenter,
                                 stops: [0.0, 0.9]),
                           ),
@@ -53,7 +53,7 @@ class Firstscree extends StatelessWidget {
                                       GestureDetector(
                                         child: Icon(
                                           Icons.language,
-                                          color: Colors.appcolo,
+                                          color: Color(0xFF058060),
                                           size: 40,
                                         ),
                                         onTap: () {
@@ -64,7 +64,7 @@ class Firstscree extends StatelessWidget {
                                       GestureDetector(
                                         child: Icon(
                                           Icons.login_outlined,
-                                          color: Colors.appcolo,
+                                          color: Color(0xFF058060),
                                           size: 40,
                                         ),
                                         onTap: () {
@@ -95,7 +95,7 @@ class Firstscree extends StatelessWidget {
                                             55,
                                             200,
                                             25,
-                                            Colors.seconedcolo,
+                                            Color(0xffdff2ea),
                                             Color(0xff000000),
                                             () {
                                               Navigator.push(context, MaterialPageRoute(builder: (context) => Shoppingscreen(),));

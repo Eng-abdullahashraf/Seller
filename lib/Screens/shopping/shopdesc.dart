@@ -23,7 +23,7 @@ class Shopdesc extends StatelessWidget {
                     Container(
                       height: 300,
                       decoration: BoxDecoration(
-                          color: Colors.appcolo,
+                          color: Color(0xFF058060),
                           borderRadius: BorderRadius.only(
                               bottomRight: Radius.circular(70),
                               bottomLeft: Radius.circular(70))),

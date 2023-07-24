@@ -20,7 +20,7 @@ class Shoppingscreen extends StatelessWidget {
         builder: (context, state) {
           return SafeArea(
             child: Scaffold(
-              backgroundColor: Colors.seconedcolo,
+              backgroundColor: Color(0xffdff2ea),
               body: SingleChildScrollView(
                 child: Column(children: [
                   Container(
@@ -29,7 +29,7 @@ class Shoppingscreen extends StatelessWidget {
                       Container(
                         height: 250,
                         decoration: BoxDecoration(
-                            color: Colors.appcolo,
+                            color: Color(0xFF058060),
                             borderRadius: BorderRadius.only(
                                 bottomRight: Radius.circular(80),
                                 bottomLeft: Radius.circular(80))),
@@ -40,7 +40,7 @@ class Shoppingscreen extends StatelessWidget {
                             padding: const EdgeInsets.all(8.0),
                             child: textfie(
                                 IC: Color(0xff000000),
-                                FC: Colors.seconedcolo,
+                                FC: Color(0xffdff2ea),
                                 PrefI: Icon(Icons.search),
                                 LT: 'Search',
                                 HT: 'Search',
