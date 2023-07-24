@@ -71,28 +71,23 @@ Widget Buttonfi(
       ),
     );
 
-Widget Shops( context) => InkWell(
-  onTap: () {
-    Navigator.push(context, MaterialPageRoute(builder: (context)=>Shopdesc()));
-  },
-  child:   Container(
-
+Widget Shops(context) => InkWell(
+      onTap: () {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => Shopdesc()));
+      },
+      child: Container(
         width: 180,
-
         decoration: BoxDecoration(
-
             color: Color(0xb08ea39c), borderRadius: BorderRadius.circular(25)),
-
         child: Center(child: Text('data')),
-
       ),
-);
+    );
 
 Widget departments() => Container(
         child: CircleAvatar(
       radius: 70, // set the radius of the circle
-    )
-);
+    ));
 
 Widget radiocontainer() => BlocProvider(
       create: (BuildContext context) => Mycubit(),
@@ -250,3 +245,4 @@ Widget Cotainer() => Container(
           color: Color(0xb08ea39c), borderRadius: BorderRadius.circular(25)),
       child: Center(child: Text('data')),
     );
+
