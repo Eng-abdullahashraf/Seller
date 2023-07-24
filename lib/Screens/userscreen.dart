@@ -23,7 +23,7 @@ class userscreen extends StatelessWidget {
           return SafeArea(
             child: Scaffold(
               appBar: AppBar(
-                backgroundColor: Color(0xff567600),
+                backgroundColor: Color(0xff058060),
               ),
               body: SingleChildScrollView(
                 child: Container(
@@ -50,7 +50,7 @@ class userscreen extends StatelessWidget {
                               child: Container(
                                 height: 150,
                                 width: double.infinity,
-                                decoration: BoxDecoration(color: Color(0xff567600),
+                                decoration: BoxDecoration(color: Color(0xff058060),
                                     borderRadius: BorderRadius.circular(20)),
                               ),
                             ),
@@ -87,7 +87,7 @@ class userscreen extends StatelessWidget {
                                       height: 120,
                                       width: 150,
                                       decoration: BoxDecoration(
-                                          color: Color(0xff567600),
+                                          color: Color(0xff058060),
                                           borderRadius:
                                               BorderRadius.circular(20)),
                                     ),
@@ -109,7 +109,7 @@ class userscreen extends StatelessWidget {
                                     height: 120,
                                     width: 150,
                                     decoration: BoxDecoration(
-                                        color: Color(0xff567600),
+                                        color: Color(0xff058060),
                                         borderRadius: BorderRadius.circular(20)),
                                   ),
                                 ),
@@ -147,7 +147,7 @@ class userscreen extends StatelessWidget {
                                       height: 120,
                                       width: 150,
                                       decoration: BoxDecoration(
-                                          color: Color(0xff567600),
+                                          color: Color(0xff058060),
                                           borderRadius:
                                               BorderRadius.circular(20)),
                                     ),
@@ -162,7 +162,7 @@ class userscreen extends StatelessWidget {
                                   height: 120,
                                   width: 150,
                                   decoration: BoxDecoration(
-                                      color: Color(0xff567600),
+                                      color: Color(0xff058060),
                                       borderRadius: BorderRadius.circular(20)),
                                 ),
                               ))
@@ -193,7 +193,7 @@ class userscreen extends StatelessWidget {
                                     height: 120,
                                     width: 150,
                                     decoration: BoxDecoration(
-                                        color: Color(0xff567600),
+                                        color: Color(0xff058060),
                                         borderRadius:
                                             BorderRadius.circular(20)),
                                   ),
@@ -207,7 +207,7 @@ class userscreen extends StatelessWidget {
                                   height: 120,
                                   width: 150,
                                   decoration: BoxDecoration(
-                                      color: Color(0xff567600),
+                                      color: Color(0xff058060),
                                       borderRadius: BorderRadius.circular(20)),
                                 ),
                               ))

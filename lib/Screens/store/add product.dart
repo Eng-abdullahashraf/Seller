@@ -10,7 +10,7 @@ class addproduct extends StatelessWidget {
     return SafeArea(
         child: Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xff567600),
+        backgroundColor: Color(0xff058060),
         title: Text(
           'منتج جديد',
           style: TextStyle(color: Colors.white),
@@ -52,7 +52,7 @@ class addproduct extends StatelessWidget {
                   width: double.infinity,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
-                    color: Color(0xff567600),
+                    color: Color(0xff058060),
                   ),
                   child: MaterialButton(
                     onPressed: () {},
@@ -162,7 +162,7 @@ class addproduct extends StatelessWidget {
                   width: double.infinity,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
-                    color: Color(0xff567600),
+                    color: Color(0xff058060),
                   ),
                   child: MaterialButton(
                     onPressed: () {},

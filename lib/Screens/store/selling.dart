@@ -7,7 +7,7 @@ class selling extends StatelessWidget {
     return SafeArea(
         child: Scaffold(
           appBar: AppBar(
-            backgroundColor: Color(0xff567600),
+            backgroundColor: Color(0xff058060),
             title: Text('فاتورة بيع جديده',
                 style: TextStyle(fontWeight: FontWeight.bold)),
             actions: [

@@ -14,7 +14,7 @@ class inventorypage extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: Color(0xff567600),
+          backgroundColor: Color(0xff058060),
           title: Text('متجر المنتجات'),
         ),
         body: Padding(
@@ -52,7 +52,7 @@ class inventorypage extends StatelessWidget {
                           borderRadius: BorderRadius.only(
                               topLeft: Radius.circular(15),
                               topRight: Radius.circular(15)),
-                        color: Color(0xff567600),),
+                        color: Color(0xff058060),),
                       height: 40,
                       width: double.infinity,
                       child:  Padding(
@@ -94,7 +94,7 @@ class inventorypage extends StatelessWidget {
                         alignment: AlignmentDirectional.bottomStart,
                         child: Padding(
                           padding: const EdgeInsets.all(20.0),
-                          child: FloatingActionButton(backgroundColor:  Color(0xff567600),
+                          child: FloatingActionButton(backgroundColor:  Color(0xff058060),
                             onPressed: () {
                               Navigator.push(context, MaterialPageRoute(builder: (context)=>addproduct()));
                             },
