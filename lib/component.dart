@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:localize_and_translate/localize_and_translate.dart';
+import 'package:seller/Screens/shopping/shopdesc.dart';
 import 'package:seller/cubit/Mycubit.dart';
 import 'package:seller/cubit/states.dart';
 
@@ -70,8 +71,9 @@ Widget Buttonfi(
       ),
     );
 
-Widget Shops() => InkWell(
+Widget Shops( context) => InkWell(
   onTap: () {
+    Navigator.push(context, MaterialPageRoute(builder: (context)=>Shopdesc()));
   },
   child:   Container(
 

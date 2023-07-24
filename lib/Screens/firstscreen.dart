@@ -114,7 +114,7 @@ class Firstscreen extends StatelessWidget {
                       height: 180,
                       child: ListView.separated(
                           scrollDirection: Axis.horizontal,
-                          itemBuilder: (context, index) => Shops(),
+                          itemBuilder: (context, index) => Shops(context),
                           separatorBuilder: (context, index) =>
                               SizedBox(width: 10),
                           itemCount: 10),

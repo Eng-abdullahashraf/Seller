@@ -1,8 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:seller/cubit/Mycubit.dart';
 import 'package:seller/cubit/states.dart';
-
 
 class Shopdesc extends StatelessWidget {
   const Shopdesc({Key? key}) : super(key: key);
@@ -11,13 +11,43 @@ class Shopdesc extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (BuildContext Context) => Mycubit(),
-      child: BlocConsumer<Mycubit,Sellerstates>(
+      child: BlocConsumer<Mycubit, Sellerstates>(
         listener: (context, state) {},
         builder: (context, state) {
           return SafeArea(
             child: Scaffold(
-              body: Container(),
-
+              body: SingleChildScrollView(
+                  child: Column(
+                children: [
+                  Stack(children: [
+                    Container(
+                      height: 300,
+                      decoration: BoxDecoration(
+                          color: Colors.appcolo,
+                          borderRadius: BorderRadius.only(
+                              bottomRight: Radius.circular(70),
+                              bottomLeft: Radius.circular(70))),
+                    ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(15),
+                          child: Image(image: AssetImage('images/im.jpg')),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(15),
+                          child: Text('Name',style: TextStyle(color: Color(0xffffffff),fontSize: 20,fontWeight: FontWeight.bold),),
+                        ),
+                        
+                        
+                      ],
+                    )
+                  ]),
+                ],
+              )
+              ),
             ),
           );
         },
