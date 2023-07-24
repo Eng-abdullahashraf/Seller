@@ -5,7 +5,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:seller/Screens/firstscree.dart';
-import 'package:seller/Screens/firstscreen.dart';
 
 
 
