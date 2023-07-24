@@ -21,7 +21,7 @@ class Login extends StatelessWidget {
           listener: (context, state) {},
           builder: (context, state) {
             return Scaffold(
-              backgroundColor: Color(0xFF058060),
+              backgroundColor: Color(0xffdff2ea),
               body: SingleChildScrollView(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -77,7 +77,7 @@ class Login extends StatelessWidget {
                       padding: const EdgeInsets.all(8.0),
                       child: textfie(
                           IC: Color(0xff000000),
-                          FC: Color(0xFF058060),
+                          FC: Color(0xffdff2ea),
                           PrefI: Icon(Icons.email),
                           LT: 'mail'.tr,
                           HT: 'acc@comp.com',
@@ -89,7 +89,7 @@ class Login extends StatelessWidget {
                       padding: const EdgeInsets.all(8.0),
                       child: textfie(
                           IC: Color(0xff000000),
-                          FC: Color(0xFF058060),
+                          FC: Color(0xffdff2ea),
                           PrefI: Icon(Icons.password_outlined),
                           LT: 'pass'.tr,
                           HT: 'pass'.tr,
