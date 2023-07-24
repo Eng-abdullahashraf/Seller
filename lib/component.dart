@@ -73,7 +73,6 @@ Widget Buttonfi(
 
 Widget Shops( context) => InkWell(
   onTap: () {
-
     Navigator.push(context, MaterialPageRoute(builder: (context)=>Shopdesc()));
   },
   child:   Container(

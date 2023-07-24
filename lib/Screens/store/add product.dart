@@ -9,106 +9,170 @@ class addproduct extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-            appBar: AppBar(
-              title: Text(
-                'منتج جديد',
-                style: TextStyle(color: Colors.white),
+      appBar: AppBar(
+        backgroundColor: Color(0xff567600),
+        title: Text(
+          'منتج جديد',
+          style: TextStyle(color: Colors.white),
+        ),
+      ),
+      body: SingleChildScrollView(
+        child: Container(
+            child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+              Padding(
+                padding: const EdgeInsets.all(5.0),
+                child: Text('اسم المنتج',
+                    style: TextStyle(fontWeight: FontWeight.bold)),
               ),
-            ),
-            body: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                    child: Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                      Text('اسم المنتج',style: TextStyle(fontWeight: FontWeight.bold)),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Container(
-                        child: Column(
-                          children: [
-                            textfie(
-                              IC: Color(0xffbcc1c6),
-                              FC: Color(0xffffffff),
-                              HT: 'ادخل اسم المنتج',
-                              Scure: false,
-                              rad: 25,
-                            ),
-                          ],
-                        ),
-                      ),
-                      Container(
-                              child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                SizedBox(child: Text('الباركود',style: TextStyle(fontWeight: FontWeight.bold))),
-                                Container(
-                                  child: Column(
-                                    children: [
-                                      textfie(
-                                        IC: Color(0xffbcc1c6),
-                                        FC: Color(0xffffffff),
-                                        HT: 'اضف الباركود',
-                                        Scure: false,
-                                        rad: 25,
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ])),
-
-                          Container(
-                                child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      SizedBox(child: Text('الكميه',style: TextStyle(fontWeight: FontWeight.bold),)),
-                                      Container(
-                                        child: Column(
-                                          children: [
-                                            textfie(
-                                              IC: Color(0xffbcc1c6),
-                                              FC: Color(0xffffffff),
-                                              HT: 'الكميه',
-                                              Scure: false,
-                                              rad: 25,
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ])
-                            ),
-
-                          Expanded(
-                            child: Container(
-                                child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      SizedBox(child: Text('سعر الشراء',style: TextStyle(fontWeight: FontWeight.bold),)),
-                                      Container(
-                                        child: Column(
-                                          children: [
-                                            textfie(
-                                              IC: Color(0xffbcc1c6),
-                                              FC: Color(0xffffffff),
-                                              HT: 'سعر الشراء',
-                                              Scure: false,
-                                              rad: 25,
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ])
-                            ),
-                          ),
-                    ])
+              SizedBox(),
+              Padding(
+                padding: const EdgeInsets.only(
+                  right: 5,
+                  left: 5,
                 ),
-            )
-        )
-    );
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    hintText: 'ادخل اسم المنتج',
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20)),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(5.0),
+                child: Text('الباركود',
+                    style: TextStyle(fontWeight: FontWeight.bold)),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(5.0),
+                child: Container(
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    color: Color(0xff567600),
+                  ),
+                  child: MaterialButton(
+                    onPressed: () {},
+                    child: Text('اضف الباركود',
+                        style: TextStyle(fontWeight: FontWeight.bold)),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(5.0),
+                child: Text('الكميه',
+                    style: TextStyle(fontWeight: FontWeight.bold)),
+              ),
+              SizedBox(),
+              Padding(
+                padding: const EdgeInsets.only(right: 5, left: 5),
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    hintText: 'الكميه',
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20)),
+                  ),
+                ),
+              ),
+              Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(right: 5),
+                    child: Text('سعر الشراء',
+                        style: TextStyle(fontWeight: FontWeight.bold)),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(right: 130),
+                    child: Text('سعر البيع',
+                        style: TextStyle(fontWeight: FontWeight.bold)),
+                  ),
+                ],
+              ),
+              Row(children: [
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: TextField(
+                      decoration: InputDecoration(
+                          hintText: "سعر الشراء",
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(20))),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  width: 20,
+                ),
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: TextField(
+                      decoration: InputDecoration(
+                          hintText: "سعر البيع",
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(20))),
+                    ),
+                  ),
+                ),
+              ]),
+              Padding(
+                padding: const EdgeInsets.all(5.0),
+                child: Text('الوصف',
+                    style: TextStyle(fontWeight: FontWeight.bold)),
+              ),
+              SizedBox(),
+              Padding(
+                padding: const EdgeInsets.only(
+                  right: 5,
+                  left: 5,
+                ),
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    hintText: 'الوصف',
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20)),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(5.0),
+                child: Text('التصنيف',
+                    style: TextStyle(fontWeight: FontWeight.bold)),
+              ),
+              SizedBox(),
+              Padding(
+                padding: const EdgeInsets.only(
+                  right: 5,
+                  left: 5,
+                ),
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    hintText: 'التصنيف',
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20)),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(5.0),
+                child: Container(
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    color: Color(0xff567600),
+                  ),
+                  child: MaterialButton(
+                    onPressed: () {},
+                    child: Text('حفظ',
+                        style: TextStyle(fontWeight: FontWeight.bold)),
+                  ),
+                ),
+              ),
+            ])),
+      ),
+    ));
   }
 }

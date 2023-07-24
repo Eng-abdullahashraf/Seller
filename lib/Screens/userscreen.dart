@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
+import 'package:seller/Screens/store/add%20product.dart';
+import 'package:seller/Screens/store/buying.dart';
 import 'package:seller/Screens/store/inventory.dart';
+import 'package:seller/Screens/store/selling.dart';
+import 'package:seller/Screens/store/suppliers.dart';
 import 'package:seller/component.dart';
 import 'package:seller/cubit/Mycubit.dart';
 import 'package:seller/cubit/states.dart';
@@ -19,37 +23,198 @@ class userscreen extends StatelessWidget {
           return SafeArea(
             child: Scaffold(
               appBar: AppBar(
-                backgroundColor: Color(0xff010155),
+                backgroundColor: Color(0xff567600),
               ),
-              body: Container(
-                child: SingleChildScrollView(
+              body: SingleChildScrollView(
+                child: Container(
                   child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=>inventorypage()));
-                        },
-                          child: usercontainer(300, 'images/im.jpg', 'Inventory'.tr, 20)),
-                      Row(
-                        children: [
-                          Expanded(child: usercontainer(300, 'images/im.jpg', 'sale'.tr, 20)),
-                          Expanded(child: usercontainer(150, 'images/im.jpg', 'purchases'.tr, 20)),
-                        ],
+                      Padding(
+                        padding: const EdgeInsets.only(right: 5),
+                        child: Text('مخزن المنتجات',
+                            style: TextStyle(fontWeight: FontWeight.bold)),
                       ),
-                      Row(
+                      Column(
                         children: [
-                          Expanded(child: usercontainer(300, 'images/im.jpg', 'suppliers'.tr, 20)),
-                          Expanded(child: usercontainer(150, 'images/im.jpg', 'customer'.tr, 20)),
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => inventorypage()));
+                              },
+                              child: Container(
+                                height: 150,
+                                width: double.infinity,
+                                decoration: BoxDecoration(color: Color(0xff567600),
+                                    borderRadius: BorderRadius.circular(20)),
+                              ),
+                            ),
+                          ),
+                          Row(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(right: 15),
+                                child: Text('شراء',
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold)),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(right: 150),
+                                child: Text('بيع',
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold)),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Expanded(
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child:GestureDetector(
+                                    onTap: (){
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                          builder: (context) => buying()));
+                                    },
+                                    child: Container(
+                                      height: 120,
+                                      width: 150,
+                                      decoration: BoxDecoration(
+                                          color: Color(0xff567600),
+                                          borderRadius:
+                                              BorderRadius.circular(20)),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              SizedBox(),
+                              Expanded(
+                                  child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: GestureDetector(
+                                  onTap: (){
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) => selling()));
+                                  },
+                                  child: Container(
+                                    height: 120,
+                                    width: 150,
+                                    decoration: BoxDecoration(
+                                        color: Color(0xff567600),
+                                        borderRadius: BorderRadius.circular(20)),
+                                  ),
+                                ),
+                              ))
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(right: 15),
+                                child: Text('الموردين',
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold)),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(right: 130),
+                                child: Text('العملاء',
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold)),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Expanded(
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: GestureDetector(onTap: (){
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) => suppliers()));
+                                  },
+                                    child: Container(
+                                      height: 120,
+                                      width: 150,
+                                      decoration: BoxDecoration(
+                                          color: Color(0xff567600),
+                                          borderRadius:
+                                              BorderRadius.circular(20)),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              SizedBox(),
+                              Expanded(
+                                  child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Container(
+                                  height: 120,
+                                  width: 150,
+                                  decoration: BoxDecoration(
+                                      color: Color(0xff567600),
+                                      borderRadius: BorderRadius.circular(20)),
+                                ),
+                              ))
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(right: 15),
+                                child: Text('المصروفات',
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold)),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(right: 115),
+                                child: Text('ادارة الحسابات',
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold)),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Expanded(
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Container(
+                                    height: 120,
+                                    width: 150,
+                                    decoration: BoxDecoration(
+                                        color: Color(0xff567600),
+                                        borderRadius:
+                                            BorderRadius.circular(20)),
+                                  ),
+                                ),
+                              ),
+                              SizedBox(),
+                              Expanded(
+                                  child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Container(
+                                  height: 120,
+                                  width: 150,
+                                  decoration: BoxDecoration(
+                                      color: Color(0xff567600),
+                                      borderRadius: BorderRadius.circular(20)),
+                                ),
+                              ))
+                            ],
+                          )
                         ],
-                      ),
-                      Row(
-                        children: [
-                          Expanded(child: usercontainer(300, 'images/im.jpg', 'expenses'.tr, 20)),
-                          Expanded(child: usercontainer(150, 'images/im.jpg', 'account'.tr, 20)),
-                        ],
-                      ),
-
-
+                      )
                     ],
                   ),
                 ),
