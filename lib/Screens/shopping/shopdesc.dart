@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:seller/component.dart';
 import 'package:seller/cubit/Mycubit.dart';
 import 'package:seller/cubit/states.dart';
 
@@ -21,7 +22,7 @@ class Shopdesc extends StatelessWidget {
                 children: [
                   Stack(children: [
                     Container(
-                      height: 300,
+                      height: 320,
                       decoration: BoxDecoration(
                           color: Color(0xFF058060),
                           borderRadius: BorderRadius.only(
@@ -33,21 +34,30 @@ class Shopdesc extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Padding(
+                          padding: const EdgeInsets.only(
+                              left: 15, right: 15, top: 15),
+                          child: Icon(Icons.arrow_back),
+                        ),
+                        Padding(
                           padding: const EdgeInsets.all(15),
                           child: Image(image: AssetImage('images/im.jpg')),
                         ),
                         Padding(
-                          padding: const EdgeInsets.all(15),
-                          child: Text('Name',style: TextStyle(color: Color(0xffffffff),fontSize: 20,fontWeight: FontWeight.bold),),
+                          padding: const EdgeInsets.only(left: 20, right: 20),
+                          child: Text(
+                            'Name',
+                            style: TextStyle(
+                                color: Color(0xffffffff),
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold),
+                          ),
                         ),
-                        
-                        
                       ],
                     )
                   ]),
+
                 ],
-              )
-              ),
+              )),
             ),
           );
         },
