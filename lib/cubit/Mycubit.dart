@@ -62,6 +62,25 @@ class Mycubit extends Cubit<Sellerstates>{
       restart: true,
     );
   }
+  List<Widget> accmanage =[sell(),salary(),prosell(),prosala()];
+  int? a = 0;
 
+  void changea(z){
+    a=z;
+    emit(Sellerchange());
+  }
+  List<Widget> agreedata = [sales(),purchases()];
+  int? g = 0;
 
+  void changeg(d){
+    g=d;
+    emit(Sellerchange());
+  }
+
+  List<Widget> c=[overview(),aggregatedata()];
+  int? v=0;
+  void changev(d){
+    v=d;
+    emit(Sellerchange());
+  }
 }

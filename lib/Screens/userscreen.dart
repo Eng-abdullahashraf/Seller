@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
+import 'package:seller/Screens/store/account%20management.dart';
 import 'package:seller/Screens/store/add%20product.dart';
 import 'package:seller/Screens/store/buying.dart';
 import 'package:seller/Screens/store/coustomers.dart';
@@ -220,12 +221,19 @@ class userscreen extends StatelessWidget {
                               Expanded(
                                   child: Padding(
                                 padding: const EdgeInsets.all(8.0),
-                                child: Container(
-                                  height: 120,
-                                  width: 150,
-                                  decoration: BoxDecoration(
-                                      color: Color(0xff058060),
-                                      borderRadius: BorderRadius.circular(20)),
+                                child: GestureDetector(onTap: (){
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => accountmanagement()));
+                                },
+                                  child: Container(
+                                    height: 120,
+                                    width: 150,
+                                    decoration: BoxDecoration(
+                                        color: Color(0xff058060),
+                                        borderRadius: BorderRadius.circular(20)),
+                                  ),
                                 ),
                               ))
                             ],

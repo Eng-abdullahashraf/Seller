@@ -141,7 +141,6 @@ class Shoppingscreen extends StatelessWidget {
                     ),
                   ),
 
-
                 ]),
               ),
             ),

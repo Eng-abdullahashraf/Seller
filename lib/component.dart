@@ -1,3 +1,4 @@
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -245,4 +246,118 @@ Widget Cotainer() => Container(
           color: Color(0xb08ea39c), borderRadius: BorderRadius.circular(25)),
       child: Center(child: Text('data')),
     );
+
+Widget overview() => BlocProvider(
+      create: (BuildContext Context) => Mycubit(),
+      child: BlocConsumer<Mycubit, Sellerstates>(
+        listener: (context, state) {},
+        builder: (context, state) {
+          return Column(
+            children: [
+              Container(
+                color: Color(0xff058060),
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      TextButton(
+                          onPressed: () {
+                            Mycubit.get(context).changea(0);
+                          },
+                          child: Text('المبيعات',
+                              style: TextStyle(color: Colors.white))),
+                      TextButton(
+                          onPressed: () {
+                            Mycubit.get(context).changea(1);
+                          },
+                          child: Text('الارباح',
+                              style: TextStyle(color: Colors.white))),
+                      TextButton(
+                          onPressed: () {
+                            Mycubit.get(context).changea(2);
+                          },
+                          child: Text('المنتجات الاكثر مبيعا',
+                              style: TextStyle(color: Colors.white))),
+                      TextButton(
+                          onPressed: () {
+                            Mycubit.get(context).changea(3);
+                          },
+                          child: Text('المنتجات الاكثر ربحا',
+                              style: TextStyle(color: Colors.white))),
+                    ],
+                  ),
+                ),
+              ),
+              Container(
+                child: Mycubit.get(context).accmanage[Mycubit.get(context).a!],
+              ),
+            ],
+          );
+        },
+      ),
+    );
+Widget sell() => Container(
+      color: Color(0xb08ea39c),
+      child: Text('data'),
+    );
+Widget salary() => Container(
+      color: Color(0xb08ea39c),
+      child: Text('data'),
+    );
+Widget prosell() => Container(
+      color: Color(0xb08ea39c),
+      child: Text('data'),
+    );
+Widget prosala() => Container(
+      color: Color(0xb08ea39c),
+      child: Text('data'),
+    );
+
+Widget aggregatedata() => BlocProvider(
+      create: (BuildContext Context) => Mycubit(),
+      child: BlocConsumer<Mycubit, Sellerstates>(
+        listener: (context, state) {},
+        builder: (context, state) {
+          return Column(
+            children: [
+              Container(
+                width: double.infinity,
+                color: Color(0xff058060),
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: TextButton(
+                          onPressed: () {
+                            Mycubit.get(context).changea(0);
+                          },
+                          child: Text('المشتريات',
+                              style: TextStyle(color: Colors.white))),
+                    ),
+                    Expanded(
+                      child: TextButton(
+                          onPressed: () {
+                            Mycubit.get(context).changea(1);
+                          },
+                          child: Text('المبيعات',
+                              style: TextStyle(color: Colors.white))),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                child: Mycubit.get(context).accmanage[Mycubit.get(context).a!],
+              ),
+            ],
+          );
+        },
+      ),
+    );
+Widget sales() => Container(
+  color: Color(0xb08ea39c),
+  child: Text('data'),
+);
+Widget purchases() => Container(
+  color: Color(0xb08ea39c),
+  child: Text('data'),
+);
 

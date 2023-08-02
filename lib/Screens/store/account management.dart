@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:seller/component.dart';
 import 'package:seller/cubit/Mycubit.dart';
 import 'package:seller/cubit/states.dart';
 
@@ -13,7 +14,54 @@ class accountmanagement extends StatelessWidget {
       child: BlocConsumer<Mycubit, Sellerstates>(
         listener: (context, state) {},
         builder: (context, state) {
-          return SafeArea(child: Scaffold());
+          return SafeArea(
+              child: Scaffold(
+            appBar: AppBar(
+              backgroundColor: Color(0xff058060),
+              title:
+                  Text('ادارة الحسابات', style: TextStyle(color: Colors.white)),
+            ),
+            body: SingleChildScrollView(
+              child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(top: 2),
+                    child: Container(
+                        height: 50,
+                        width: double.infinity,
+                        decoration: BoxDecoration(color: Color(0xff058060)),
+                        child: Row(
+                          children: [
+                            Expanded(
+                              child: TextButton(
+                                  onPressed: () {
+                                    Mycubit.get(context).changev(0);
+                                  },
+                                  child: Text('نظره عامة',
+                                      style: TextStyle(color: Colors.white))),
+                            ),
+                             Expanded(
+                               child: TextButton(
+                                      onPressed: () {
+                                        Mycubit.get(context).changev(1);
+                                      },
+                                      child: Text('بيانات مجمعه',
+                                          style:
+                                              TextStyle(color: Colors.white))),
+                             ),
+                          ],
+                        )),
+                  ),
+                  Column(children: [
+                    Padding(
+                      padding: const EdgeInsets.only(top: 2),
+                      child: Mycubit.get(context).c[Mycubit.get(context).v!],
+                    ),
+                  ]),
+                ],
+              ),
+            ),
+          ));
         },
       ),
     );
