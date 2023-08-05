@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:get/get.dart';
 import 'package:seller/cubit/Mycubit.dart';
 import 'package:seller/cubit/states.dart';
 
@@ -17,7 +18,7 @@ class selling extends StatelessWidget {
               child: Scaffold(
             appBar: AppBar(
               backgroundColor: Color(0xff058060),
-              title: Text('فاتورة بيع جديده',
+              title: Text('newbill'.tr,
                   style: TextStyle(fontWeight: FontWeight.bold)),
               actions: [
                 IconButton(onPressed: () {}, icon: Icon(Icons.more_vert)),
@@ -29,15 +30,17 @@ class selling extends StatelessWidget {
                   children: [
                     Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: Text('اضف منتج',
+                      child: Text('addproduct'.tr,
                           style: TextStyle(fontWeight: FontWeight.bold)),
                     ),
                     Expanded(
-                        child: Padding(
-                      padding: const EdgeInsets.only(right: 150),
-                      child: TextButton(
-                          onPressed: () {}, child: Text('استخدم الباركود')),
-                    )),
+
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 130),
+                        child: TextButton(
+                            onPressed: () {}, child: Text('useofbarcode'.tr)),
+                      ),
+                    ),
                   ],
                 ),
                 Padding(
@@ -50,7 +53,7 @@ class selling extends StatelessWidget {
                         Expanded(
                           child: TextFormField(
                             decoration: InputDecoration(
-                              hintText: 'ادخل اسم منتج او صنف بالفاتورة',
+                              hintText: 'enternameproanditem'.tr,
                               border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(20)),
                             ),

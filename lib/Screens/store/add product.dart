@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:get/get.dart';
 import 'package:seller/cubit/Mycubit.dart';
 import 'package:seller/cubit/states.dart';
 
@@ -20,7 +21,7 @@ class addproduct extends StatelessWidget {
             appBar: AppBar(
               backgroundColor: Color(0xff058060),
               title: Text(
-                'منتج جديد',
+                'newproduct'.tr,
                 style: TextStyle(color: Colors.white),
               ),
             ),
@@ -32,7 +33,7 @@ class addproduct extends StatelessWidget {
                       children: [
                     Padding(
                       padding: const EdgeInsets.all(5.0),
-                      child: Text('اسم المنتج',
+                      child: Text('productname'.tr,
                           style: TextStyle(fontWeight: FontWeight.bold)),
                     ),
                     SizedBox(),
@@ -43,7 +44,7 @@ class addproduct extends StatelessWidget {
                       ),
                       child: TextFormField(
                         decoration: InputDecoration(
-                          hintText: 'ادخل اسم المنتج',
+                          hintText: 'enter product name'.tr,
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(20)),
                         ),
@@ -51,7 +52,7 @@ class addproduct extends StatelessWidget {
                     ),
                     Padding(
                       padding: const EdgeInsets.all(5.0),
-                      child: Text('الباركود',
+                      child: Text('barcode'.tr,
                           style: TextStyle(fontWeight: FontWeight.bold)),
                     ),
                     Padding(
@@ -64,14 +65,14 @@ class addproduct extends StatelessWidget {
                         ),
                         child: MaterialButton(
                           onPressed: () {},
-                          child: Text('اضف الباركود',
+                          child: Text('addbarcode'.tr,
                               style: TextStyle(fontWeight: FontWeight.bold)),
                         ),
                       ),
                     ),
                     Padding(
                       padding: const EdgeInsets.all(5.0),
-                      child: Text('الكميه',
+                      child: Text('quantity'.tr,
                           style: TextStyle(fontWeight: FontWeight.bold)),
                     ),
                     SizedBox(),
@@ -79,7 +80,7 @@ class addproduct extends StatelessWidget {
                       padding: const EdgeInsets.only(right: 5, left: 5),
                       child: TextFormField(
                         decoration: InputDecoration(
-                          hintText: 'الكميه',
+                          hintText: 'quantity'.tr,
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(20)),
                         ),
@@ -89,12 +90,12 @@ class addproduct extends StatelessWidget {
                       children: [
                         Padding(
                           padding: const EdgeInsets.only(right: 5),
-                          child: Text('سعر الشراء',
+                          child: Text('purchasingprice'.tr,
                               style: TextStyle(fontWeight: FontWeight.bold)),
                         ),
                         Padding(
                           padding: const EdgeInsets.only(right: 130),
-                          child: Text('سعر البيع',
+                          child: Text('sellingprice'.tr,
                               style: TextStyle(fontWeight: FontWeight.bold)),
                         ),
                       ],
@@ -105,7 +106,7 @@ class addproduct extends StatelessWidget {
                           padding: const EdgeInsets.all(8.0),
                           child: TextField(
                             decoration: InputDecoration(
-                                hintText: "سعر الشراء",
+                                hintText: 'purchasingprice'.tr,
                                 border: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(20))),
                           ),
@@ -119,7 +120,7 @@ class addproduct extends StatelessWidget {
                           padding: const EdgeInsets.all(8.0),
                           child: TextField(
                             decoration: InputDecoration(
-                                hintText: "سعر البيع",
+                                hintText: 'sellingprice'.tr,
                                 border: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(20))),
                           ),
@@ -128,7 +129,7 @@ class addproduct extends StatelessWidget {
                     ]),
                     Padding(
                       padding: const EdgeInsets.all(5.0),
-                      child: Text('الوصف',
+                      child: Text('description'.tr,
                           style: TextStyle(fontWeight: FontWeight.bold)),
                     ),
                     SizedBox(),
@@ -139,7 +140,7 @@ class addproduct extends StatelessWidget {
                       ),
                       child: TextFormField(
                         decoration: InputDecoration(
-                          hintText: 'الوصف',
+                          hintText: 'description'.tr,
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(20)),
                         ),
@@ -147,7 +148,7 @@ class addproduct extends StatelessWidget {
                     ),
                     Padding(
                       padding: const EdgeInsets.all(5.0),
-                      child: Text('التصنيف',
+                      child: Text('category'.tr,
                           style: TextStyle(fontWeight: FontWeight.bold)),
                     ),
                     SizedBox(),
@@ -158,7 +159,7 @@ class addproduct extends StatelessWidget {
                       ),
                       child: TextFormField(
                         decoration: InputDecoration(
-                          hintText: 'التصنيف',
+                          hintText: 'category'.tr,
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(20)),
                         ),
@@ -174,7 +175,7 @@ class addproduct extends StatelessWidget {
                         ),
                         child: MaterialButton(
                           onPressed: () {},
-                          child: Text('حفظ',
+                          child: Text('save'.tr,
                               style: TextStyle(fontWeight: FontWeight.bold)),
                         ),
                       ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:get/get.dart';
 import 'package:seller/component.dart';
 import 'package:seller/cubit/Mycubit.dart';
 import 'package:seller/cubit/states.dart';
@@ -19,7 +20,7 @@ class expenses extends StatelessWidget {
             appBar: AppBar(
               backgroundColor: Color(0xff058060),
               title: Text(
-                'المصروفات',
+                'expenses'.tr,
                 style: TextStyle(color: Colors.white),
               ),
             ),
@@ -31,7 +32,7 @@ class expenses extends StatelessWidget {
                   children: [
                     Padding(
                       padding: const EdgeInsets.all(5.0),
-                      child: Text('جهة الصرف',
+                      child: Text('exchangeparty'.tr,
                           style: TextStyle(fontWeight: FontWeight.bold)),
                     ),
                     SizedBox(),
@@ -42,7 +43,7 @@ class expenses extends StatelessWidget {
                       ),
                       child: TextFormField(
                         decoration: InputDecoration(
-                          hintText: 'ادخل جهة الصرف',
+                          hintText: 'enterexchange'.tr,
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(20)),
                         ),
@@ -50,7 +51,7 @@ class expenses extends StatelessWidget {
                     ),
                     Padding(
                       padding: const EdgeInsets.all(5.0),
-                      child: Text('المبلغ المصروف',
+                      child: Text('amountspent'.tr,
                           style: TextStyle(fontWeight: FontWeight.bold)),
                     ),
                     SizedBox(),
@@ -62,7 +63,7 @@ class expenses extends StatelessWidget {
                       child: TextFormField(
                         keyboardType: TextInputType.number,
                         decoration: InputDecoration(
-                          hintText: 'ادخل المبلغ المصروف',
+                          hintText: 'enterspentamount'.tr,
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(20)),
                         ),
@@ -70,7 +71,7 @@ class expenses extends StatelessWidget {
                     ),
                     Padding(
                       padding: const EdgeInsets.all(5.0),
-                      child: Text('تاريخ الصرف',
+                      child: Text('exchangedate'.tr,
                           style: TextStyle(fontWeight: FontWeight.bold)),
                     ),
                     InkWell(
@@ -118,7 +119,7 @@ class expenses extends StatelessWidget {
                         children: [
                           Expanded(
                               child: Buttonfi(
-                                  'حفظ',
+                                  'save'.tr,
                                   50,
                                   double.infinity,
                                   20,

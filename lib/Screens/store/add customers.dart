@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:get/get.dart';
 import 'package:seller/component.dart';
 import 'package:seller/cubit/Mycubit.dart';
 import 'package:seller/cubit/states.dart';
@@ -18,7 +19,7 @@ class addcustomers extends StatelessWidget {
               child: Scaffold(
             appBar: AppBar(
               backgroundColor: Color(0xff058060),
-              title: Text('عميل جديد', style: TextStyle(color: Colors.white)),
+              title: Text('newcustomer'.tr, style: TextStyle(color: Colors.white)),
             ),
             body: SingleChildScrollView(
                 child: Container(
@@ -28,7 +29,7 @@ class addcustomers extends StatelessWidget {
                   children: [
                     Padding(
                       padding: const EdgeInsets.all(5.0),
-                      child: Text('اسم العميل',
+                      child: Text('customername'.tr,
                           style: TextStyle(fontWeight: FontWeight.bold)),
                     ),
                     SizedBox(),
@@ -39,7 +40,7 @@ class addcustomers extends StatelessWidget {
                       ),
                       child: TextFormField(
                         decoration: InputDecoration(
-                          hintText: 'ادخل اسم العميل',
+                          hintText: 'enter customer name'.tr,
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(20)),
                         ),
@@ -47,7 +48,7 @@ class addcustomers extends StatelessWidget {
                     ),
                     Padding(
                       padding: const EdgeInsets.all(5.0),
-                      child: Text('العنوان',
+                      child: Text('address'.tr,
                           style: TextStyle(fontWeight: FontWeight.bold)),
                     ),
                     SizedBox(),
@@ -58,7 +59,7 @@ class addcustomers extends StatelessWidget {
                       ),
                       child: TextFormField(
                         decoration: InputDecoration(
-                          hintText: 'ادخل عنوان العميل',
+                          hintText: 'enter customer address'.tr,
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(20)),
                         ),
@@ -66,7 +67,7 @@ class addcustomers extends StatelessWidget {
                     ),
                     Padding(
                       padding: const EdgeInsets.all(5.0),
-                      child: Text('رقم الهاتف',
+                      child: Text('phonenum'.tr,
                           style: TextStyle(fontWeight: FontWeight.bold)),
                     ),
                     SizedBox(),
@@ -78,7 +79,7 @@ class addcustomers extends StatelessWidget {
                       child: TextFormField(
                         keyboardType: TextInputType.number,
                         decoration: InputDecoration(
-                          hintText: 'ادخل رقم الهاتف',
+                          hintText: 'enterphone'.tr,
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(20)),
                         ),
@@ -86,7 +87,7 @@ class addcustomers extends StatelessWidget {
                     ),
                     Padding(
                       padding: const EdgeInsets.all(5.0),
-                      child: Text('الملاحظات',
+                      child: Text('notes'.tr,
                           style: TextStyle(fontWeight: FontWeight.bold)),
                     ),
                     SizedBox(),
@@ -97,7 +98,7 @@ class addcustomers extends StatelessWidget {
                       ),
                       child: TextFormField(
                         decoration: InputDecoration(
-                          hintText: 'اضف ملاحظاتك',
+                          hintText: 'addnotes'.tr,
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(20)),
                         ),
@@ -109,7 +110,7 @@ class addcustomers extends StatelessWidget {
                         children: [
                           Expanded(
                               child: Buttonfi(
-                                  'حفظ',
+                                  'save'.tr,
                                   50,
                                   80,
                                   20,
@@ -122,7 +123,7 @@ class addcustomers extends StatelessWidget {
                           ),
                           Expanded(
                               child: Buttonfi(
-                                  'مسح',
+                                  'clean'.tr,
                                   50,
                                   80,
                                   20,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:get/get.dart';
 import 'package:seller/Screens/store/add%20customers.dart';
 import 'package:seller/component.dart';
 import 'package:seller/cubit/Mycubit.dart';
@@ -19,7 +20,7 @@ class customers extends StatelessWidget {
             child: Scaffold(
               appBar: AppBar(
                 backgroundColor: Color(0xff058060),
-                title: Text('العملاء'),
+                title: Text('clients'.tr),
               ),
               body: Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -28,7 +29,7 @@ class customers extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('ابحث عن عميل'),
+                        Text('findclient'.tr),
                         SizedBox(
                           height: 15,
                         ),
@@ -38,8 +39,8 @@ class customers extends StatelessWidget {
                               textfie(
                                 IC: Color(0xffbcc1c6),
                                 FC: Color(0xffffffff),
-                                LT: 'العملاء',
-                                HT: 'ادخل اسم العميل',
+                                LT: 'clients'.tr,
+                                HT: 'enter customer name'.tr,
                                 Scure: false,
                                 rad: 25,
                               ),
@@ -63,20 +64,19 @@ class customers extends StatelessWidget {
                               padding: EdgeInsets.all(8.0),
                               child: Row(
                                 children: [
-                                  Padding(
-                                    padding: EdgeInsets.only(
-                                      right: 10,
-                                    ),
+                                  Expanded(
                                     child: Text(
-                                      'العميل',
+                                      'customer'.tr,
                                       style: TextStyle(color: Colors.white),
                                     ),
                                   ),
-                                  Padding(
-                                    padding: EdgeInsets.only(right: 220),
-                                    child: Text(
-                                      'رقم العميل',
-                                      style: TextStyle(color: Colors.white),
+                                  Expanded(
+                                    child: Padding(
+                                      padding: const EdgeInsets.only(left: 45),
+                                      child: Text(
+                                        'customernum'.tr,
+                                        style: TextStyle(color: Colors.white),
+                                      ),
                                     ),
                                   ),
                                 ],

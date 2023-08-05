@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:get/get.dart';
 import 'package:seller/Screens/store/add%20product.dart';
 import 'package:seller/cubit/Mycubit.dart';
 import 'package:seller/cubit/states.dart';
@@ -21,7 +22,7 @@ class inventorypage extends StatelessWidget {
             child: Scaffold(
               appBar: AppBar(
                 backgroundColor: Color(0xff058060),
-                title: Text('متجر المنتجات'),
+                title: Text('productstore'.tr),
               ),
               body: Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -30,7 +31,7 @@ class inventorypage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('ابحث عن منتج'),
+                        Text('findproduct'.tr),
                         SizedBox(
                           height: 15,
                         ),
@@ -41,8 +42,8 @@ class inventorypage extends StatelessWidget {
                                 IC: Color(0xffbcc1c6),
                                 FC: Color(0xffffffff),
                                 PrefI: Icon(Icons.add_shopping_cart),
-                                LT: 'المنتجات',
-                                HT: 'ابحث عن منتج',
+                                LT: 'products'.tr,
+                                HT: 'findproduct'.tr,
                                 Scure: false,
                                 rad: 25,
                               ),
@@ -71,7 +72,7 @@ class inventorypage extends StatelessWidget {
                                       right: 10,
                                     ),
                                     child: Text(
-                                      'السعر',
+                                      'price'.tr,
                                       style: TextStyle(color: Colors.white),
                                     ),
                                   ),
@@ -79,7 +80,7 @@ class inventorypage extends StatelessWidget {
                                     child: Padding(
                                       padding: EdgeInsets.only(right: 30),
                                       child: Text(
-                                        'الكميه',
+                                        'quantity'.tr,
                                         style: TextStyle(color: Colors.white),
                                       ),
                                     ),
@@ -87,7 +88,7 @@ class inventorypage extends StatelessWidget {
                                   Padding(
                                     padding: EdgeInsets.only(left: 10),
                                     child: Text(
-                                      'المنتج',
+                                      'products'.tr,
                                       style: TextStyle(color: Colors.white),
                                     ),
                                   ),

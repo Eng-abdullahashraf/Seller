@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:get/get.dart';
 import 'package:seller/Screens/store/add%20suppliers.dart';
 import 'package:seller/component.dart';
 import 'package:seller/cubit/Mycubit.dart';
@@ -19,7 +20,7 @@ class suppliers extends StatelessWidget {
             child: Scaffold(
               appBar: AppBar(
                 backgroundColor: Color(0xff058060),
-                title: Text('الموردين'),
+                title: Text('suppliers'.tr),
               ),
               body: Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -28,7 +29,7 @@ class suppliers extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('ابحث عن مورد'),
+                        Text('findsuppliers'.tr),
                         SizedBox(
                           height: 15,
                         ),
@@ -38,8 +39,8 @@ class suppliers extends StatelessWidget {
                               textfie(
                                 IC: Color(0xffbcc1c6),
                                 FC: Color(0xffffffff),
-                                LT: 'الموردين',
-                                HT: 'ادخل اسم المورد',
+                                LT: 'suppliers'.tr,
+                                HT: 'entersuppliersname'.tr,
                                 Scure: false,
                                 rad: 25,
                               ),
@@ -63,22 +64,21 @@ class suppliers extends StatelessWidget {
                               padding: EdgeInsets.all(8.0),
                               child: Row(
                                 children: [
-                                  Padding(
-                                    padding: EdgeInsets.only(
-                                      right: 10,
-                                    ),
+                                  Expanded(
                                     child: Text(
-                                      'المورد',
+                                      'suppliers'.tr,
                                       style: TextStyle(color: Colors.white),
                                     ),
                                   ),
-                                  Padding(
-                                    padding: EdgeInsets.only(right: 220),
-                                    child: Text(
-                                      'رقم المورد',
-                                      style: TextStyle(color: Colors.white),
+                                  Expanded(
+                                    child: Padding(
+                                      padding: const EdgeInsets.only(left: 50),
+                                      child: Text(
+                                          'suppliernumber'.tr,
+                                          style: TextStyle(color: Colors.white),
+                                        ),
                                     ),
-                                  ),
+                                    ),
                                 ],
                               ),
                             ),

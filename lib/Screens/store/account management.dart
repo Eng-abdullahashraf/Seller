@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:get/get.dart';
 import 'package:seller/component.dart';
 import 'package:seller/cubit/Mycubit.dart';
 import 'package:seller/cubit/states.dart';
@@ -19,7 +20,7 @@ class accountmanagement extends StatelessWidget {
             appBar: AppBar(
               backgroundColor: Color(0xff058060),
               title:
-                  Text('ادارة الحسابات', style: TextStyle(color: Colors.white)),
+                  Text('accoutmanagement'.tr, style: TextStyle(color: Colors.white)),
             ),
             body: SingleChildScrollView(
               child: Column(
@@ -37,7 +38,7 @@ class accountmanagement extends StatelessWidget {
                                   onPressed: () {
                                     Mycubit.get(context).changev(0);
                                   },
-                                  child: Text('نظره عامة',
+                                  child: Text('overview'.tr,
                                       style: TextStyle(color: Colors.white))),
                             ),
                              Expanded(
@@ -45,7 +46,7 @@ class accountmanagement extends StatelessWidget {
                                       onPressed: () {
                                         Mycubit.get(context).changev(1);
                                       },
-                                      child: Text('بيانات مجمعه',
+                                      child: Text('aggregatedata'.tr,
                                           style:
                                               TextStyle(color: Colors.white))),
                              ),

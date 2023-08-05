@@ -7,6 +7,7 @@ import 'package:seller/Screens/shopping/shopdesc.dart';
 import 'package:seller/cubit/Mycubit.dart';
 import 'package:seller/cubit/states.dart';
 
+
 Widget textfie(
     {@required Color? IC,
     @required Color? FC,
@@ -247,7 +248,7 @@ Widget Cotainer() => Container(
       child: Center(child: Text('data')),
     );
 
-Widget overview() => BlocProvider(
+Widget overview(a,b,c,d) => BlocProvider(
       create: (BuildContext Context) => Mycubit(),
       child: BlocConsumer<Mycubit, Sellerstates>(
         listener: (context, state) {},
@@ -264,25 +265,25 @@ Widget overview() => BlocProvider(
                           onPressed: () {
                             Mycubit.get(context).changea(0);
                           },
-                          child: Text('المبيعات',
+                          child: Text('$a',
                               style: TextStyle(color: Colors.white))),
                       TextButton(
                           onPressed: () {
                             Mycubit.get(context).changea(1);
                           },
-                          child: Text('الارباح',
+                          child: Text('$b',
                               style: TextStyle(color: Colors.white))),
                       TextButton(
                           onPressed: () {
                             Mycubit.get(context).changea(2);
                           },
-                          child: Text('المنتجات الاكثر مبيعا',
+                          child: Text('$c',
                               style: TextStyle(color: Colors.white))),
                       TextButton(
                           onPressed: () {
                             Mycubit.get(context).changea(3);
                           },
-                          child: Text('المنتجات الاكثر ربحا',
+                          child: Text('$d',
                               style: TextStyle(color: Colors.white))),
                     ],
                   ),
@@ -313,7 +314,7 @@ Widget prosala() => Container(
       child: Text('data'),
     );
 
-Widget aggregatedata() => BlocProvider(
+Widget aggregatedata(x,y) => BlocProvider(
       create: (BuildContext Context) => Mycubit(),
       child: BlocConsumer<Mycubit, Sellerstates>(
         listener: (context, state) {},
@@ -330,7 +331,7 @@ Widget aggregatedata() => BlocProvider(
                           onPressed: () {
                             Mycubit.get(context).changea(0);
                           },
-                          child: Text('المشتريات',
+                          child: Text('$y',
                               style: TextStyle(color: Colors.white))),
                     ),
                     Expanded(
@@ -338,7 +339,7 @@ Widget aggregatedata() => BlocProvider(
                           onPressed: () {
                             Mycubit.get(context).changea(1);
                           },
-                          child: Text('المبيعات',
+                          child: Text('$x',
                               style: TextStyle(color: Colors.white))),
                     ),
                   ],

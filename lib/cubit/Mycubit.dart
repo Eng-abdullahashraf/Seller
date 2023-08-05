@@ -9,6 +9,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:localize_and_translate/localize_and_translate.dart';
 import 'package:seller/component.dart';
 import 'package:seller/cubit/states.dart';
+import 'package:get/get.dart';
+
 
 class Mycubit extends Cubit<Sellerstates>{
 
@@ -77,7 +79,7 @@ class Mycubit extends Cubit<Sellerstates>{
     emit(Sellerchange());
   }
 
-  List<Widget> c=[overview(),aggregatedata()];
+  List<Widget> c=[overview(Trans('thesales').tr,Trans('profits').tr,Trans('bestsellingpro').tr,Trans('mostprofpro').tr),aggregatedata(Trans('thesales').tr,Trans('purchases').tr)];
   int? v=0;
   void changev(d){
     v=d;

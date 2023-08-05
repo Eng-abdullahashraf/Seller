@@ -35,8 +35,8 @@ class userscreen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Padding(
-                        padding: const EdgeInsets.only(right: 5),
-                        child: Text('مخزن المنتجات',
+                        padding: const EdgeInsets.only(right: 5, left: 5),
+                        child: Text('productstore'.tr,
                             style: TextStyle(fontWeight: FontWeight.bold)),
                       ),
                       Column(
@@ -53,24 +53,29 @@ class userscreen extends StatelessWidget {
                               child: Container(
                                 height: 150,
                                 width: double.infinity,
-                                decoration: BoxDecoration(color: Color(0xff058060),
+                                decoration: BoxDecoration(
+                                    color: Color(0xff058060),
                                     borderRadius: BorderRadius.circular(20)),
                               ),
                             ),
                           ),
                           Row(
                             children: [
-                              Padding(
-                                padding: const EdgeInsets.only(right: 15),
-                                child: Text('شراء',
-                                    style:
-                                        TextStyle(fontWeight: FontWeight.bold)),
+                              Expanded(
+                                child: Padding(
+                                  padding: const EdgeInsets.only(left: 5),
+                                  child: Text('buying'.tr,
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold)),
+                                ),
                               ),
-                              Padding(
-                                padding: const EdgeInsets.only(right: 150),
-                                child: Text('بيع',
-                                    style:
-                                        TextStyle(fontWeight: FontWeight.bold)),
+                              Expanded(
+                                child: Padding(
+                                  padding: const EdgeInsets.only(left: 10),
+                                  child: Text('sale'.tr,
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold)),
+                                ),
                               ),
                             ],
                           ),
@@ -79,12 +84,12 @@ class userscreen extends StatelessWidget {
                               Expanded(
                                 child: Padding(
                                   padding: const EdgeInsets.all(8.0),
-                                  child:GestureDetector(
-                                    onTap: (){
+                                  child: GestureDetector(
+                                    onTap: () {
                                       Navigator.push(
                                           context,
                                           MaterialPageRoute(
-                                          builder: (context) => buying()));
+                                              builder: (context) => buying()));
                                     },
                                     child: Container(
                                       height: 120,
@@ -102,7 +107,7 @@ class userscreen extends StatelessWidget {
                                   child: Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: GestureDetector(
-                                  onTap: (){
+                                  onTap: () {
                                     Navigator.push(
                                         context,
                                         MaterialPageRoute(
@@ -113,7 +118,8 @@ class userscreen extends StatelessWidget {
                                     width: 150,
                                     decoration: BoxDecoration(
                                         color: Color(0xff058060),
-                                        borderRadius: BorderRadius.circular(20)),
+                                        borderRadius:
+                                            BorderRadius.circular(20)),
                                   ),
                                 ),
                               ))
@@ -121,18 +127,21 @@ class userscreen extends StatelessWidget {
                           ),
                           Row(
                             children: [
-                              Padding(
-                                padding: const EdgeInsets.only(right: 15),
-                                child: Text('الموردين',
+                              Expanded(
+                                child: Padding(
+                                  padding: const EdgeInsets.only(left: 5),
+                                  child: Text('suppliers'.tr,
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold)),
+                                ),
+                              ),
+                              Expanded(
+                                  child: Padding(
+                                padding: const EdgeInsets.only(left: 10),
+                                child: Text('customers'.tr,
                                     style:
                                         TextStyle(fontWeight: FontWeight.bold)),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(right: 130),
-                                child: Text('العملاء',
-                                    style:
-                                        TextStyle(fontWeight: FontWeight.bold)),
-                              ),
+                              ))
                             ],
                           ),
                           Row(
@@ -140,12 +149,14 @@ class userscreen extends StatelessWidget {
                               Expanded(
                                 child: Padding(
                                   padding: const EdgeInsets.all(8.0),
-                                  child: GestureDetector(onTap: (){
-                                    Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) => suppliers()));
-                                  },
+                                  child: GestureDetector(
+                                    onTap: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  suppliers()));
+                                    },
                                     child: Container(
                                       height: 120,
                                       width: 150,
@@ -162,7 +173,7 @@ class userscreen extends StatelessWidget {
                                   child: Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: GestureDetector(
-                                  onTap: (){
+                                  onTap: () {
                                     Navigator.push(
                                         context,
                                         MaterialPageRoute(
@@ -173,7 +184,8 @@ class userscreen extends StatelessWidget {
                                     width: 150,
                                     decoration: BoxDecoration(
                                         color: Color(0xff058060),
-                                        borderRadius: BorderRadius.circular(20)),
+                                        borderRadius:
+                                            BorderRadius.circular(20)),
                                   ),
                                 ),
                               ))
@@ -181,18 +193,20 @@ class userscreen extends StatelessWidget {
                           ),
                           Row(
                             children: [
-                              Padding(
-                                padding: const EdgeInsets.only(right: 15),
-                                child: Text('المصروفات',
+                              Expanded(
+                                  child: Padding(
+                                padding: const EdgeInsets.only(left: 5),
+                                child: Text('expenses'.tr,
                                     style:
                                         TextStyle(fontWeight: FontWeight.bold)),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(right: 115),
-                                child: Text('ادارة الحسابات',
+                              )),
+                              Expanded(
+                                  child: Padding(
+                                padding: const EdgeInsets.only(left: 10),
+                                child: Text('account'.tr,
                                     style:
                                         TextStyle(fontWeight: FontWeight.bold)),
-                              ),
+                              ))
                             ],
                           ),
                           Row(
@@ -200,12 +214,14 @@ class userscreen extends StatelessWidget {
                               Expanded(
                                 child: Padding(
                                   padding: const EdgeInsets.all(8.0),
-                                  child: GestureDetector(onTap: (){
-                                    Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) => expenses()));
-                                  },
+                                  child: GestureDetector(
+                                    onTap: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  expenses()));
+                                    },
                                     child: Container(
                                       height: 120,
                                       width: 150,
@@ -221,18 +237,21 @@ class userscreen extends StatelessWidget {
                               Expanded(
                                   child: Padding(
                                 padding: const EdgeInsets.all(8.0),
-                                child: GestureDetector(onTap: (){
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) => accountmanagement()));
-                                },
+                                child: GestureDetector(
+                                  onTap: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                accountmanagement()));
+                                  },
                                   child: Container(
                                     height: 120,
                                     width: 150,
                                     decoration: BoxDecoration(
                                         color: Color(0xff058060),
-                                        borderRadius: BorderRadius.circular(20)),
+                                        borderRadius:
+                                            BorderRadius.circular(20)),
                                   ),
                                 ),
                               ))
