@@ -88,7 +88,7 @@ class inventorypage extends StatelessWidget {
                                   Padding(
                                     padding: EdgeInsets.only(left: 10),
                                     child: Text(
-                                      'products'.tr,
+                                      'products '.tr,
                                       style: TextStyle(color: Colors.white),
                                     ),
                                   ),

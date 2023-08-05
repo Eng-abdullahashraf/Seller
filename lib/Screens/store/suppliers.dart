@@ -72,7 +72,7 @@ class suppliers extends StatelessWidget {
                                   ),
                                   Expanded(
                                     child: Padding(
-                                      padding: const EdgeInsets.only(left: 50),
+                                      padding: const EdgeInsets.only(left: 50 ),
                                       child: Text(
                                           'suppliernumber'.tr,
                                           style: TextStyle(color: Colors.white),

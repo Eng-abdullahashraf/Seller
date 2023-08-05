@@ -123,7 +123,7 @@ class addsuppliers extends StatelessWidget {
                           ),
                           Expanded(
                               child: Buttonfi(
-                                  'clean'.tr,
+                                  'clean'.tr ,
                                   50,
                                   80,
                                   20,

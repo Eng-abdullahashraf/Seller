@@ -36,7 +36,7 @@ class selling extends StatelessWidget {
                     Expanded(
 
                       child: Padding(
-                        padding: const EdgeInsets.only(left: 130),
+                        padding: const EdgeInsets.only(left: 130 ),
                         child: TextButton(
                             onPressed: () {}, child: Text('useofbarcode'.tr)),
                       ),

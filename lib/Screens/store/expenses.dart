@@ -119,7 +119,7 @@ class expenses extends StatelessWidget {
                         children: [
                           Expanded(
                               child: Buttonfi(
-                                  'save'.tr,
+                                  'save'.tr ,
                                   50,
                                   double.infinity,
                                   20,

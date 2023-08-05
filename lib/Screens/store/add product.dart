@@ -175,7 +175,7 @@ class addproduct extends StatelessWidget {
                         ),
                         child: MaterialButton(
                           onPressed: () {},
-                          child: Text('save'.tr,
+                          child: Text('save'.tr ,
                               style: TextStyle(fontWeight: FontWeight.bold)),
                         ),
                       ),
