@@ -74,4 +74,5 @@ const Map<String, String> en={
   'profits':'Profits',
   'bestsellingpro':'Best Selling Product',
   'mostprofpro':'The Most Profitable products',
+  'descreption':'descreption',
 };

@@ -89,7 +89,7 @@ class expenses extends StatelessWidget {
                           width: double.infinity,
                           alignment: Alignment.center,
                           decoration: BoxDecoration(
-                              color: Color(0xffffffff)!,
+                              color: Color(0xffffffff),
                               borderRadius: BorderRadius.circular(15),
                               boxShadow: [
                                 BoxShadow(

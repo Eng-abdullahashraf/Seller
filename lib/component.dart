@@ -1,4 +1,3 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -6,7 +5,6 @@ import 'package:localize_and_translate/localize_and_translate.dart';
 import 'package:seller/Screens/shopping/shopdesc.dart';
 import 'package:seller/cubit/Mycubit.dart';
 import 'package:seller/cubit/states.dart';
-
 
 Widget textfie(
     {@required Color? IC,
@@ -73,23 +71,41 @@ Widget Buttonfi(
       ),
     );
 
-Widget Shops(context) => InkWell(
+Widget Shops(context, image, name) => InkWell(
       onTap: () {
         Navigator.push(
             context, MaterialPageRoute(builder: (context) => Shopdesc()));
       },
       child: Container(
-        width: 180,
-        decoration: BoxDecoration(
-            color: Color(0xb08ea39c), borderRadius: BorderRadius.circular(25)),
-        child: Center(child: Text('data')),
-      ),
+          width: 180,
+          decoration: BoxDecoration(
+              color: Color(0xffffffff),
+              borderRadius: BorderRadius.circular(25)),
+          child: Column(
+            children: [
+              ClipRRect(
+                  borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(25),
+                      topRight: Radius.circular(25)),
+                  child: Image.network('$image')),
+              Text('$name')
+            ],
+          )),
     );
 
-Widget departments() => Container(
-        child: CircleAvatar(
-      radius: 70, // set the radius of the circle
-    ));
+Widget departments(x, s) => Column(
+  children: [
+    CircleAvatar(
+    
+      radius: 60,
+    
+      backgroundImage: NetworkImage('$x'),
+    
+    ),
+    Text('$s',style: TextStyle(fontSize: 20,color: Color(0xFF058060)),)
+    
+  ],
+);
 
 Widget radiocontainer() => BlocProvider(
       create: (BuildContext context) => Mycubit(),
@@ -241,14 +257,10 @@ Widget usercontainer(
       ),
     );
 
-Widget Cotainer() => Container(
-      width: double.infinity,
-      decoration: BoxDecoration(
-          color: Color(0xb08ea39c), borderRadius: BorderRadius.circular(25)),
-      child: Center(child: Text('data')),
-    );
+Widget Cotainer(String x) => ClipRRect(
+    borderRadius: BorderRadius.circular(25), child: Image.network('$x'));
 
-Widget overview(a,b,c,d) => BlocProvider(
+Widget overview(a, b, c, d) => BlocProvider(
       create: (BuildContext Context) => Mycubit(),
       child: BlocConsumer<Mycubit, Sellerstates>(
         listener: (context, state) {},
@@ -314,7 +326,7 @@ Widget prosala() => Container(
       child: Text('data'),
     );
 
-Widget aggregatedata(x,y) => BlocProvider(
+Widget aggregatedata(x, y) => BlocProvider(
       create: (BuildContext Context) => Mycubit(),
       child: BlocConsumer<Mycubit, Sellerstates>(
         listener: (context, state) {},
@@ -354,11 +366,36 @@ Widget aggregatedata(x,y) => BlocProvider(
       ),
     );
 Widget sales() => Container(
-  color: Color(0xb08ea39c),
-  child: Text('data'),
-);
+      color: Color(0xb08ea39c),
+      child: Text('data'),
+    );
 Widget purchases() => Container(
-  color: Color(0xb08ea39c),
-  child: Text('data'),
-);
+      color: Color(0xb08ea39c),
+      child: Text('data'),
+    );
 
+Widget descrep() => Container(
+      child: Text(
+        'We are always working to serve our customers with distinction and care. All we care about is the customer\'s comfort, because it is good to serve you, and we are working to make you happy.',
+        style: TextStyle(fontSize: 20),
+        maxLines: 4,
+        overflow: TextOverflow.ellipsis,
+      ),
+    );
+Widget productlist() => Container(
+      width: 150,
+      height: 180,
+      child: Column(
+        children: [
+          Image.network('https://clipground.com/images/dairy-png-6.jpg'),
+          Text('Name of product'),
+          Text('price 30\$'),
+        ],
+      ),
+    );
+
+Widget productliste() => ListView.separated(
+    scrollDirection: Axis.horizontal,
+    itemBuilder: (Context, index) => productlist(),
+    separatorBuilder: (context, index) => SizedBox(width: 20),
+    itemCount: 10);

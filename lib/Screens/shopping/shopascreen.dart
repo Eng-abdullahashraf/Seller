@@ -13,6 +13,8 @@ class Shoppingscreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var search = TextEditingController();
+
+
     return BlocProvider(
       create: (BuildContext context) => Mycubit(),
       child: BlocConsumer<Mycubit, Sellerstates>(
@@ -48,7 +50,7 @@ class Shoppingscreen extends StatelessWidget {
                                 rad: 20,
                                 controller: search),
                           ),
-                          Text('LOCATION',
+                          Text('El Manzala - Dakhali - Egypt',
                               style: TextStyle(
                                   fontSize: 15, color: Color(0xffdff2ea))),
                           SizedBox(
@@ -70,7 +72,8 @@ class Shoppingscreen extends StatelessWidget {
                                   reverse: true,
                                   viewportFraction: 1.0,
                                   autoPlayCurve: Curves.fastOutSlowIn,
-                                  autoPlayAnimationDuration: Duration(seconds: 5),
+                                  autoPlayAnimationDuration:
+                                      Duration(seconds: 5),
                                   enableInfiniteScroll: true,
                                 ),
                               ),
@@ -80,15 +83,16 @@ class Shoppingscreen extends StatelessWidget {
                       ),
                     ]),
                   ),
-                  Divider(color: Colors.grey,thickness: 2,),
+                  Divider(
+                    color: Colors.grey,
+                    thickness: 2,
+                  ),
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
-
                     children: [
                       Padding(
-                        padding: const EdgeInsets.only(left: 10,right: 10),
+                        padding: const EdgeInsets.only(left: 10, right: 10),
                         child: Text(
-
                           'shops'.tr,
                           style: TextStyle(
                               fontSize: 25,
@@ -99,26 +103,27 @@ class Shoppingscreen extends StatelessWidget {
                     ],
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(left: 10,right: 10),
+                    padding: const EdgeInsets.only(left: 10, right: 10),
                     child: Container(
                       height: 150,
                       child: ListView.separated(
                           scrollDirection: Axis.horizontal,
-                          itemBuilder: (context, index) => Shops(context),
+                          itemBuilder: (context, index) => Shops(context,Mycubit.get(context).shopsimage[index],Mycubit.get(context).shopsname[index]),
                           separatorBuilder: (context, index) =>
                               SizedBox(width: 10),
-                          itemCount: 10),
+                          itemCount: Mycubit.get(context).shopsimage.length),
                     ),
                   ),
-                  Divider(color: Colors.grey,thickness: 2,),
+                  Divider(
+                    color: Colors.grey,
+                    thickness: 2,
+                  ),
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
-
                     children: [
                       Padding(
-                        padding: const EdgeInsets.only(left: 10,right: 10),
+                        padding: const EdgeInsets.only(left: 10, right: 10),
                         child: Text(
-
                           'depart'.tr,
                           style: TextStyle(
                               fontSize: 25,
@@ -129,18 +134,17 @@ class Shoppingscreen extends StatelessWidget {
                     ],
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(left: 10,right: 10),
+                    padding: const EdgeInsets.only(left: 10, right: 10),
                     child: Container(
                       height: 150,
                       child: ListView.separated(
                           scrollDirection: Axis.horizontal,
-                          itemBuilder: (context, index) => departments(),
+                          itemBuilder: (context, index) => departments(Mycubit.get(context).sectionshops[index],Mycubit.get(context).sectionname[index]),
                           separatorBuilder: (context, index) =>
                               SizedBox(width: 10),
                           itemCount: 3),
                     ),
                   ),
-
                 ]),
               ),
             ),

@@ -56,34 +56,38 @@ class userscreen extends StatelessWidget {
                                 decoration: BoxDecoration(
                                     color: Color(0xff058060),
                                     borderRadius: BorderRadius.circular(20)),
+                                child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(20),
+                                    child: Image.network(
+                                      'https://www.acanforadesign.com/sites/default/files/styles/full/public/projects/aD%20Life%20roomsets%202.jpeg?itok=lPcfIhkT',
+                                      fit: BoxFit.cover,
+                                    )),
                               ),
                             ),
                           ),
-                          Row(
-                            children: [
-                              Expanded(
-                                child: Padding(
-                                  padding: const EdgeInsets.only(left: 5),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 10, right: 10),
+                            child: Row(
+                              children: [
+                                Expanded(
                                   child: Text('buying'.tr,
                                       style: TextStyle(
                                           fontWeight: FontWeight.bold)),
                                 ),
-                              ),
-                              Expanded(
-                                child: Padding(
-                                  padding: const EdgeInsets.only(left: 10),
+                                SizedBox(width: 15),
+                                Expanded(
                                   child: Text('sale'.tr,
                                       style: TextStyle(
                                           fontWeight: FontWeight.bold)),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
-                          Row(
-                            children: [
-                              Expanded(
-                                child: Padding(
-                                  padding: const EdgeInsets.all(8.0),
+                          Padding(
+                            padding: const EdgeInsets.all(10),
+                            child: Row(
+                              children: [
+                                Expanded(
                                   child: GestureDetector(
                                     onTap: () {
                                       Navigator.push(
@@ -98,15 +102,20 @@ class userscreen extends StatelessWidget {
                                           color: Color(0xff058060),
                                           borderRadius:
                                               BorderRadius.circular(20)),
-                                    ),
+                                        child: ClipRRect(
+                                          borderRadius: BorderRadius.circular(20),
+                                          child: Image.network(
+                                            'https://www.loftware.com/siteassets/photos/food-bev-brunette-boyfriend-buying.jpg',
+                                            fit: BoxFit.cover,
+                                          ),
+                                        ),
+
+                          ),
                                   ),
                                 ),
-                              ),
-                              SizedBox(),
-                              Expanded(
-                                  child: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: GestureDetector(
+                                SizedBox(width: 15),
+                                Expanded(
+                                    child: GestureDetector(
                                   onTap: () {
                                     Navigator.push(
                                         context,
@@ -120,35 +129,41 @@ class userscreen extends StatelessWidget {
                                         color: Color(0xff058060),
                                         borderRadius:
                                             BorderRadius.circular(20)),
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.circular(20),
+                                      child: Image.network(
+                                        'https://www.openbravo.com/blog/wp-content/uploads/2018/08/BOPIS-vs-Cart-Abandonment-Go-Omnichannel-with-Openbravo.jpg',
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
+
                                   ),
-                                ),
-                              ))
-                            ],
+                                ))
+                              ],
+                            ),
                           ),
-                          Row(
-                            children: [
-                              Expanded(
-                                child: Padding(
-                                  padding: const EdgeInsets.only(left: 5),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 10, right: 10),
+                            child: Row(
+                              children: [
+                                Expanded(
                                   child: Text('suppliers'.tr,
                                       style: TextStyle(
                                           fontWeight: FontWeight.bold)),
                                 ),
-                              ),
-                              Expanded(
-                                  child: Padding(
-                                padding: const EdgeInsets.only(left: 10),
-                                child: Text('customers'.tr,
-                                    style:
-                                        TextStyle(fontWeight: FontWeight.bold)),
-                              ))
-                            ],
+                                SizedBox(width: 15),
+                                Expanded(
+                                    child: Text('customers'.tr,
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold)))
+                              ],
+                            ),
                           ),
-                          Row(
-                            children: [
-                              Expanded(
-                                child: Padding(
-                                  padding: const EdgeInsets.all(8.0),
+                          Padding(
+                            padding: const EdgeInsets.all(10.0),
+                            child: Row(
+                              children: [
+                                Expanded(
                                   child: GestureDetector(
                                     onTap: () {
                                       Navigator.push(
@@ -164,15 +179,20 @@ class userscreen extends StatelessWidget {
                                           color: Color(0xff058060),
                                           borderRadius:
                                               BorderRadius.circular(20)),
+                                      child: ClipRRect(
+                                        borderRadius: BorderRadius.circular(20),
+                                        child: Image.network(
+                                          'https://econo-courier.com/wp-content/uploads/2017/01/Businessmen-Checking-Boxes-With-Digital-Tablet-179271131_2033x1476.jpeg',
+                                          fit: BoxFit.cover,
+                                        ),
+                                      ),
+
                                     ),
                                   ),
                                 ),
-                              ),
-                              SizedBox(),
-                              Expanded(
-                                  child: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: GestureDetector(
+                                SizedBox(width: 15),
+                                Expanded(
+                                    child: GestureDetector(
                                   onTap: () {
                                     Navigator.push(
                                         context,
@@ -186,34 +206,40 @@ class userscreen extends StatelessWidget {
                                         color: Color(0xff058060),
                                         borderRadius:
                                             BorderRadius.circular(20)),
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.circular(20),
+                                      child: Image.network(
+                                        'https://d9s1543upwp3n.cloudfront.net/wp-content/uploads/2018/07/shutterstock_551860849-1.jpg',
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
+
                                   ),
-                                ),
-                              ))
-                            ],
+                                ))
+                              ],
+                            ),
                           ),
-                          Row(
-                            children: [
-                              Expanded(
-                                  child: Padding(
-                                padding: const EdgeInsets.only(left: 5),
-                                child: Text('expenses'.tr,
-                                    style:
-                                        TextStyle(fontWeight: FontWeight.bold)),
-                              )),
-                              Expanded(
-                                  child: Padding(
-                                padding: const EdgeInsets.only(left: 10),
-                                child: Text('account'.tr,
-                                    style:
-                                        TextStyle(fontWeight: FontWeight.bold)),
-                              ))
-                            ],
+                          Padding(
+                            padding: const EdgeInsets.only(left: 10, right: 10),
+                            child: Row(
+                              children: [
+                                Expanded(
+                                    child: Text('expenses'.tr,
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold))),
+                                SizedBox(width: 15),
+                                Expanded(
+                                    child: Text('account'.tr,
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold)))
+                              ],
+                            ),
                           ),
-                          Row(
-                            children: [
-                              Expanded(
-                                child: Padding(
-                                  padding: const EdgeInsets.all(8.0),
+                          Padding(
+                            padding: const EdgeInsets.all(10.0),
+                            child: Row(
+                              children: [
+                                Expanded(
                                   child: GestureDetector(
                                     onTap: () {
                                       Navigator.push(
@@ -229,15 +255,20 @@ class userscreen extends StatelessWidget {
                                           color: Color(0xff058060),
                                           borderRadius:
                                               BorderRadius.circular(20)),
+                                      child: ClipRRect(
+                                        borderRadius: BorderRadius.circular(20),
+                                        child: Image.network(
+                                          'https://www.diligen.in/wp-content/uploads/2022/11/Diligen-Blog-Images-July-22-91.jpg',
+                                          fit: BoxFit.cover,
+                                        ),
+                                      ),
+
                                     ),
                                   ),
                                 ),
-                              ),
-                              SizedBox(),
-                              Expanded(
-                                  child: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: GestureDetector(
+                                SizedBox(width: 15),
+                                Expanded(
+                                    child: GestureDetector(
                                   onTap: () {
                                     Navigator.push(
                                         context,
@@ -252,10 +283,18 @@ class userscreen extends StatelessWidget {
                                         color: Color(0xff058060),
                                         borderRadius:
                                             BorderRadius.circular(20)),
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.circular(20),
+                                      child: Image.network(
+                                        'https://dm-productions.com/wp-content/uploads/2018/02/health-1.jpg ',
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
+
                                   ),
-                                ),
-                              ))
-                            ],
+                                ))
+                              ],
+                            ),
                           )
                         ],
                       )

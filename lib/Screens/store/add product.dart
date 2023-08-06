@@ -55,22 +55,12 @@ class addproduct extends StatelessWidget {
                       child: Text('barcode'.tr,
                           style: TextStyle(fontWeight: FontWeight.bold)),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(5.0),
-                      child: Container(
-                        width: double.infinity,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          color: Color(0xff058060),
+                        Padding(
+                          padding: const EdgeInsets.all(5.0),
+                          child: Buttonfi('addbarcode'.tr, 45, double.infinity, 20, Color(0xff058060), Color(0xffffffff), (){}, 20),
                         ),
-                        child: MaterialButton(
-                          onPressed: () {},
-                          child: Text('addbarcode'.tr,
-                              style: TextStyle(fontWeight: FontWeight.bold)),
-                        ),
-                      ),
-                    ),
-                    Padding(
+
+                        Padding(
                       padding: const EdgeInsets.all(5.0),
                       child: Text('quantity'.tr,
                           style: TextStyle(fontWeight: FontWeight.bold)),
@@ -86,17 +76,25 @@ class addproduct extends StatelessWidget {
                         ),
                       ),
                     ),
+
                     Row(
                       children: [
-                        Padding(
-                          padding: const EdgeInsets.only(right: 5),
-                          child: Text('purchasingprice'.tr,
-                              style: TextStyle(fontWeight: FontWeight.bold)),
+                        Expanded(
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text('purchasingprice'.tr,
+                                style: TextStyle(fontWeight: FontWeight.bold)),
+                          ),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(right: 130),
-                          child: Text('sellingprice'.tr,
-                              style: TextStyle(fontWeight: FontWeight.bold)),
+                        SizedBox(
+                          width: 20,
+                        ),
+                        Expanded(
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text('sellingprice'.tr,
+                                style: TextStyle(fontWeight: FontWeight.bold)),
+                          ),
                         ),
                       ],
                     ),
@@ -165,20 +163,12 @@ class addproduct extends StatelessWidget {
                         ),
                       ),
                     ),
+                        SizedBox(
+                          height: 20,
+                        ),
                     Padding(
                       padding: const EdgeInsets.all(5.0),
-                      child: Container(
-                        width: double.infinity,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          color: Color(0xff058060),
-                        ),
-                        child: MaterialButton(
-                          onPressed: () {},
-                          child: Text('save'.tr ,
-                              style: TextStyle(fontWeight: FontWeight.bold)),
-                        ),
-                      ),
+                      child: Buttonfi('save'.tr, 45, double.infinity, 20, Color(0xff058060), Color(0xffffffff), (){}, 20),
                     ),
                   ])),
             ),

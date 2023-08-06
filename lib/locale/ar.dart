@@ -74,4 +74,5 @@ const Map<String, String> ar={
   'profits':'الارباح',
   'bestsellingpro':'المنتجات الاكثر مبيعا',
   'mostprofpro':'المنتجات الاكثر ربحا',
+  'descreption':'الوصف',
 };
