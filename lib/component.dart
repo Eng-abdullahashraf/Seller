@@ -71,6 +71,25 @@ Widget Buttonfi(
       ),
     );
 
+Widget newbutton(
+  @required String? tex,
+  @required double? hei,
+  @required double? wid,
+  @required double? tfont,
+  @required Color? bcolor,
+  @required Color? tcolor,
+  @required VoidCallback? onta,
+  @required double? decoration,
+) =>
+    MaterialButton(
+      onPressed: onta,
+      height: hei,
+      color: bcolor,
+      child: Text('$tex', style: TextStyle(color: tcolor, fontSize: tfont),
+
+      ),
+    );
+
 Widget Shops(context, image, name) => InkWell(
       onTap: () {
         Navigator.push(
@@ -94,18 +113,17 @@ Widget Shops(context, image, name) => InkWell(
     );
 
 Widget departments(x, s) => Column(
-  children: [
-    CircleAvatar(
-    
-      radius: 60,
-    
-      backgroundImage: NetworkImage('$x'),
-    
-    ),
-    Text('$s',style: TextStyle(fontSize: 20,color: Color(0xFF058060)),)
-    
-  ],
-);
+      children: [
+        CircleAvatar(
+          radius: 60,
+          backgroundImage: NetworkImage('$x'),
+        ),
+        Text(
+          '$s',
+          style: TextStyle(fontSize: 20, color: Color(0xFF058060)),
+        )
+      ],
+    );
 
 Widget radiocontainer() => BlocProvider(
       create: (BuildContext context) => Mycubit(),

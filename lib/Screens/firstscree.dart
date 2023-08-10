@@ -38,10 +38,7 @@ class Firstscree extends StatelessWidget {
                         Container(
                           width: double.infinity,
                           decoration: BoxDecoration(
-                            gradient: LinearGradient(
-                                colors: [Color(0xFF058060), Color(0x70dff2ea)],
-                                begin: Alignment.bottomCenter,
-                                stops: [0.0, 0.9]),
+                            color: Color(0x889EB89C)
                           ),
                           child: Padding(
                             padding: const EdgeInsets.all(10),
