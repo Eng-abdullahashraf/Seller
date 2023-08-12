@@ -81,12 +81,17 @@ Widget newbutton(
   @required VoidCallback? onta,
   @required double? decoration,
 ) =>
-    MaterialButton(
+    ElevatedButton(
       onPressed: onta,
-      height: hei,
-      color: bcolor,
-      child: Text('$tex', style: TextStyle(color: tcolor, fontSize: tfont),
-
+      style: ElevatedButton.styleFrom(
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(decoration!)),
+        minimumSize: Size(wid!, hei!),
+        primary: bcolor,
+      ),
+      child: Text(
+        '$tex',
+        style: TextStyle(color: tcolor, fontSize: tfont),
       ),
     );
 

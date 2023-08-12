@@ -1,6 +1,9 @@
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
+import 'package:seller/Screens/loginpage/forgetpass.dart';
+import 'package:seller/Screens/loginpage/signup.dart';
 import 'package:seller/Screens/userscreen.dart';
 import 'package:seller/component.dart';
 import 'package:seller/cubit/Mycubit.dart';
@@ -103,7 +106,9 @@ class Login extends StatelessWidget {
                       child: Row(
                         children: [
                           TextButton(
-                            onPressed: (){},
+                            onPressed: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => Forgetpassword(),));
+                            },
                             child: Text(
                               'forget'.tr,
                             ),
@@ -113,7 +118,7 @@ class Login extends StatelessWidget {
                     ),
                     Container(
                       alignment: Alignment.center,
-                      child: Buttonfi('logi'.tr, 55, 250, 20, Color(0xFF058060),
+                      child: newbutton('logi'.tr, 55, 250, 20, Color(0xFF058060),
                           Color(0xffffffff), () {
                         Navigator.pushReplacement(
                             context,
@@ -128,7 +133,9 @@ class Login extends StatelessWidget {
                         children: [
                           Text('dont'.tr,),
                           TextButton(
-                            onPressed: (){},
+                            onPressed: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context)=> signup()));
+                            },
                             child: Text(
                               'signup'.tr,
 

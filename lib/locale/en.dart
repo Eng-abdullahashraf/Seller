@@ -75,13 +75,4 @@ const Map<String, String> en={
   'bestsellingpro':'Best Selling Product',
   'mostprofpro':'The Most Profitable products',
   'descreption':'descreption',
-  'settings':'Settings',
-  'treasury':'Treasury',
-  'printersettings':'Printer Settings',
-  'technicalsupport':'Technical Support',
-  'shareapp':'Share App',
-  'trasurybalance':'Treasury Balance',
-  'currentbal':'Current Balance',
-  'addmoney':'Add Money To Treasury',
-  'deductmoney':'Deducting Money To Treasury',
 };

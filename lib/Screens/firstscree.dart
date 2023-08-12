@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
-import 'package:seller/Screens/Login.dart';
+import 'package:seller/Screens/loginpage/Login.dart';
 import 'package:seller/Screens/shopping/shopascreen.dart';
 import 'package:seller/component.dart';
 import 'package:seller/cubit/Mycubit.dart';
@@ -87,7 +87,7 @@ class Firstscree extends StatelessWidget {
                                           height: 50,
                                         ),
 
-                                        Buttonfi(
+                                        newbutton(
                                             'shopping'.tr,
                                             55,
                                             200,
