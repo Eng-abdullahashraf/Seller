@@ -111,4 +111,10 @@ class Mycubit extends Cubit<Sellerstates>{
     emit(Sellerchange());
   }
 
+  String? shebo=Trans('deductmoney').tr;
+
+  void changeshebo(value){
+    shebo=value;
+    emit(Sellerchange());
+  }
 }

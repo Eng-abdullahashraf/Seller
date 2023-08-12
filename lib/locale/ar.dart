@@ -75,4 +75,13 @@ const Map<String, String> ar={
   'bestsellingpro':'المنتجات الاكثر مبيعا',
   'mostprofpro':'المنتجات الاكثر ربحا',
   'descreption':'الوصف',
+  'settings':'الاعدادات',
+  'treasury':'الخزينه',
+  'printersettings':'اعدادات الطابعه',
+  'technicalsupport':'الدعم الفنى',
+  'shareapp':'مشاركة التطبيق',
+  'trasurybalance':'رصيد الخزينه',
+  'currentbal':'الرصيد الحالى',
+  'addmoney':'اضافة مبلغ للخزينة',
+  'deductmoney':'خصم مبلغ من الخزينة',
 };

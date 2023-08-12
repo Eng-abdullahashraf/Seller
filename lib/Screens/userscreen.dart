@@ -1,6 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
+import 'package:seller/Screens/drawer/treasury.dart';
 import 'package:seller/Screens/store/account%20management.dart';
 import 'package:seller/Screens/store/add%20product.dart';
 import 'package:seller/Screens/store/buying.dart';
@@ -27,7 +29,78 @@ class userscreen extends StatelessWidget {
             child: Scaffold(
               appBar: AppBar(
                 backgroundColor: Color(0xff058060),
+               actions:[ Padding(
+                 padding: const EdgeInsets.only(left: 5,right: 5),
+                 child: IconButton(icon: Icon(Icons.arrow_forward),color: Color(0xffffffff), onPressed: () {
+                   Navigator.pop(context);
+                 },),
+               )],
               ),
+              drawer: Drawer(
+                  child: ListView(
+                children: [
+                  DrawerHeader(
+                    child: Image.network(
+                      'https://papik.pro/uploads/posts/2021-11/1636109504_1-papik-pro-p-logotipi-odezhdi-foto-1.jpg',
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+
+                  ListTile(
+                    title: Text(
+                      'treasury'.tr,
+                      style:
+                      TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                    ),
+                    leading: Icon(Icons.monetization_on_outlined,color: Color(0xff000000)),
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=> Treasury()));
+                    },
+                  ),
+                  ListTile(
+                    title: Text(
+                      'printersettings'.tr,
+                      style:
+                      TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                    ),
+                    leading: Icon(Icons.print,color: Color(0xff000000),),
+                  ),
+                  ListTile(
+                    title: Text(
+                      'settings'.tr,
+                      style:
+                      TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                    ),
+                    leading: Icon(Icons.settings,color: Color(0xff000000)),
+                  ),
+                  SizedBox(height: 20,),
+                  Divider(color: Color(0xff000000),),
+                  ListTile(
+                    title: Text(
+                      'technicalsupport'.tr,
+                      style:
+                      TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                    ),
+                    leading: Icon(Icons.phone,color: Color(0xff000000),),
+                  ),
+                  ListTile(
+                    title: Text(
+                      "about".tr,
+                      style:
+                      TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                    ),
+                    leading: Icon(Icons.supervised_user_circle_sharp,color: Color(0xff000000),),
+                  ),
+                  ListTile(
+                    title: Text(
+                      'shareapp'.tr,
+                      style:
+                      TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                    ),
+                    leading: Icon(Icons.share,color: Color(0xff000000),),
+                  ),
+                ],
+              )),
               body: SingleChildScrollView(
                 child: Container(
                   child: Column(
@@ -102,15 +175,14 @@ class userscreen extends StatelessWidget {
                                           color: Color(0xff058060),
                                           borderRadius:
                                               BorderRadius.circular(20)),
-                                        child: ClipRRect(
-                                          borderRadius: BorderRadius.circular(20),
-                                          child: Image.network(
-                                            'https://www.loftware.com/siteassets/photos/food-bev-brunette-boyfriend-buying.jpg',
-                                            fit: BoxFit.cover,
-                                          ),
+                                      child: ClipRRect(
+                                        borderRadius: BorderRadius.circular(20),
+                                        child: Image.network(
+                                          'https://www.loftware.com/siteassets/photos/food-bev-brunette-boyfriend-buying.jpg',
+                                          fit: BoxFit.cover,
                                         ),
-
-                          ),
+                                      ),
+                                    ),
                                   ),
                                 ),
                                 SizedBox(width: 15),
@@ -136,7 +208,6 @@ class userscreen extends StatelessWidget {
                                         fit: BoxFit.cover,
                                       ),
                                     ),
-
                                   ),
                                 ))
                               ],
@@ -186,7 +257,6 @@ class userscreen extends StatelessWidget {
                                           fit: BoxFit.cover,
                                         ),
                                       ),
-
                                     ),
                                   ),
                                 ),
@@ -213,7 +283,6 @@ class userscreen extends StatelessWidget {
                                         fit: BoxFit.cover,
                                       ),
                                     ),
-
                                   ),
                                 ))
                               ],
@@ -262,7 +331,6 @@ class userscreen extends StatelessWidget {
                                           fit: BoxFit.cover,
                                         ),
                                       ),
-
                                     ),
                                   ),
                                 ),
@@ -290,7 +358,6 @@ class userscreen extends StatelessWidget {
                                         fit: BoxFit.cover,
                                       ),
                                     ),
-
                                   ),
                                 ))
                               ],
