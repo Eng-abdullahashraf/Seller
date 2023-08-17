@@ -86,5 +86,4 @@ const Map<String, String> ar={
   'printauto':'طباعة تلقائيا بعد الحفظ ',
   'askaftersaving':'اسال بعد حفظ الفاتوره',
   'printertest':'اختبار الطابعة',
-
 };
