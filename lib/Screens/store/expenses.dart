@@ -129,7 +129,7 @@ class expenses extends StatelessWidget {
                                   20)),
                         ],
                       ),
-                    )
+                    ),
                   ]),
             )),
           ));

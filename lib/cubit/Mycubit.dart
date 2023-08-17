@@ -117,4 +117,21 @@ class Mycubit extends Cubit<Sellerstates>{
     shebo=value;
     emit(Sellerchange());
   }
+
+  String? dropd = '88mm';
+  List<String> zal=['88m','58mm'];
+  void changedropd(value){
+    dropd=value;
+    emit(Sellerchange());
+  }
+
+  String? dropdown = 'notprinting';
+
+  List<String> al=['notprinting','s','d'];
+
+  void changedropdown(value){
+    dropdown=value;
+    emit(Sellerchange());
+  }
+
 }

@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
+import 'package:seller/Screens/drawer/printersettings.dart';
 import 'package:seller/Screens/drawer/treasury.dart';
 import 'package:seller/Screens/store/account%20management.dart';
 import 'package:seller/Screens/store/add%20product.dart';
@@ -64,6 +65,9 @@ class userscreen extends StatelessWidget {
                       TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                     ),
                     leading: Icon(Icons.print,color: Color(0xff000000),),
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>PrinterSettings()));
+                    },
                   ),
                   ListTile(
                     title: Text(
