@@ -135,10 +135,8 @@ class userscreen extends StatelessWidget {
                                     borderRadius: BorderRadius.circular(20)),
                                 child: ClipRRect(
                                     borderRadius: BorderRadius.circular(20),
-                                    child: Image.network(
-                                      'https://www.acanforadesign.com/sites/default/files/styles/full/public/projects/aD%20Life%20roomsets%202.jpeg?itok=lPcfIhkT',
-                                      fit: BoxFit.cover,
-                                    )),
+                                    child: Image(image: AssetImage('images/store.jpeg'),fit: BoxFit.cover),
+                                ),
                               ),
                             ),
                           ),
@@ -160,6 +158,7 @@ class userscreen extends StatelessWidget {
                               ],
                             ),
                           ),
+
                           Padding(
                             padding: const EdgeInsets.all(10),
                             child: Row(
@@ -181,10 +180,7 @@ class userscreen extends StatelessWidget {
                                               BorderRadius.circular(20)),
                                       child: ClipRRect(
                                         borderRadius: BorderRadius.circular(20),
-                                        child: Image.network(
-                                          'https://www.loftware.com/siteassets/photos/food-bev-brunette-boyfriend-buying.jpg',
-                                          fit: BoxFit.cover,
-                                        ),
+                                        child: Image(image: AssetImage('images/seal.jpg'),fit: BoxFit.cover,),
                                       ),
                                     ),
                                   ),
@@ -207,10 +203,7 @@ class userscreen extends StatelessWidget {
                                             BorderRadius.circular(20)),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(20),
-                                      child: Image.network(
-                                        'https://www.openbravo.com/blog/wp-content/uploads/2018/08/BOPIS-vs-Cart-Abandonment-Go-Omnichannel-with-Openbravo.jpg',
-                                        fit: BoxFit.cover,
-                                      ),
+                                      child: Image(image: AssetImage('images/buy.jpg'),fit: BoxFit.cover),
                                     ),
                                   ),
                                 ))
@@ -256,10 +249,7 @@ class userscreen extends StatelessWidget {
                                               BorderRadius.circular(20)),
                                       child: ClipRRect(
                                         borderRadius: BorderRadius.circular(20),
-                                        child: Image.network(
-                                          'https://econo-courier.com/wp-content/uploads/2017/01/Businessmen-Checking-Boxes-With-Digital-Tablet-179271131_2033x1476.jpeg',
-                                          fit: BoxFit.cover,
-                                        ),
+                                        child: Image(image: AssetImage('images/mord.jpeg')),
                                       ),
                                     ),
                                   ),
@@ -282,10 +272,7 @@ class userscreen extends StatelessWidget {
                                             BorderRadius.circular(20)),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(20),
-                                      child: Image.network(
-                                        'https://d9s1543upwp3n.cloudfront.net/wp-content/uploads/2018/07/shutterstock_551860849-1.jpg',
-                                        fit: BoxFit.cover,
-                                      ),
+                                      child: Image(image: AssetImage('images/customer.jpg'),fit: BoxFit.cover),
                                     ),
                                   ),
                                 ))
@@ -330,10 +317,7 @@ class userscreen extends StatelessWidget {
                                               BorderRadius.circular(20)),
                                       child: ClipRRect(
                                         borderRadius: BorderRadius.circular(20),
-                                        child: Image.network(
-                                          'https://www.diligen.in/wp-content/uploads/2022/11/Diligen-Blog-Images-July-22-91.jpg',
-                                          fit: BoxFit.cover,
-                                        ),
+                                        child: Image(image: AssetImage('images/fead.jpg'),fit: BoxFit.cover),
                                       ),
                                     ),
                                   ),
@@ -357,10 +341,7 @@ class userscreen extends StatelessWidget {
                                             BorderRadius.circular(20)),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(20),
-                                      child: Image.network(
-                                        'https://dm-productions.com/wp-content/uploads/2018/02/health-1.jpg ',
-                                        fit: BoxFit.cover,
-                                      ),
+                                      child: Image(image: AssetImage('images/reports.jpg'),)
                                     ),
                                   ),
                                 ))

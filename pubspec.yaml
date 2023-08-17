@@ -71,6 +71,13 @@ flutter:
     - images/ima.jpg
     - images/imag.jpg
     - images/back.png
+    - images/store.jpeg
+    - images/seal.jpg
+    - images/buy.jpg
+    - images/mord.jpeg
+    - images/customer.jpg
+    - images/fead.jpg
+    - images/reports.jpg
     - assets/lang/en.json
     - assets/lang/ar.json
 
@@ -78,7 +85,6 @@ flutter:
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
-  # For details regarding adding assets from package dependencies, see
   # https://flutter.dev/assets-and-images/#from-packages
 
   # To add custom fonts to your application, add a fonts section here,
@@ -91,7 +97,8 @@ flutter:
   #     fonts:
   #       - asset: fonts/Schyler-Regular.ttf
   #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
+  #          style: italic
+  # For details regarding adding assets from package dependencies, see
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf
